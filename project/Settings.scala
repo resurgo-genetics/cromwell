@@ -141,7 +141,8 @@ object Settings {
   ) ++ commonSettings
 
   val servicesSettings = List(
-    name := "cromwell-services"
+    name := "cromwell-services",
+    libraryDependencies ++= serviceDependencies
   ) ++ commonSettings
 
   val gcsFileSystemSettings = List(
