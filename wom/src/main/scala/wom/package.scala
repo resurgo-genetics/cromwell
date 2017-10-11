@@ -1,7 +1,7 @@
 
-import wdl.values.WdlValue
 import wom.callable.Callable.InputDefinition
+import wom.values.WomValue
 
 package object wom {
-  type WomEvaluatedCallInputs = Map[InputDefinition, WdlValue]
+  type WomEvaluatedCallInputs = Map[InputDefinition, WomValue]
 }

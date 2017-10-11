@@ -9,9 +9,9 @@ import cats.syntax.validated._
 import lenthall.collections.EnhancedCollections._
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.{:+:, CNil}
-import wdl.values.WdlValue
 import wom.expression.WomExpression
 import wom.graph.GraphNodePort.InputPort
+import wom.values.WomValue
 
 /**
   * A sealed set of graph nodes.
@@ -28,7 +28,7 @@ final case class Graph private(nodes: Set[GraphNode]) {
 
 object Graph {
 
-  type ResolvedExecutableInput = WdlValue :+: WomExpression :+: CNil
+  type ResolvedExecutableInput = WomValue :+: WomExpression :+: CNil
 
   /**
     * Checks that every input port for every node in the graph references an upstream node that is also in the graph.

@@ -1,6 +1,5 @@
 package wom.graph
 
-import wdl.types.WdlOptionalType
 import wom.graph.GraphNode.GeneratedNodeAndNewNodes
 import wom.graph.GraphNodePort.{ConditionalOutputPort, InputPort, OutputPort}
 
@@ -32,7 +31,7 @@ object ConditionalNode  {
     val graphNodeSetter = new GraphNode.GraphNodeSetter()
 
     val outputPorts: Set[ConditionalOutputPort] = innerGraph.nodes.collect { case gon: PortBasedGraphOutputNode =>
-      ConditionalOutputPort(WdlOptionalType(gon.womType), gon, graphNodeSetter.get)
+      ConditionalOutputPort(gon.womType.optionalType, gon, graphNodeSetter.get)
     }
 
     val conditionalNode: ConditionalNode = ConditionalNode(innerGraph, expressionNode, outputPorts)

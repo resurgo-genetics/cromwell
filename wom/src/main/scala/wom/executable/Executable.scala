@@ -4,14 +4,14 @@ import cats.syntax.validated._
 import lenthall.Checked
 import lenthall.validation.ErrorOr._
 import shapeless.Coproduct
-import wdl.types.WdlType
-import wdl.values.WdlValue
 import wom.callable.Callable
 import wom.executable.Executable.ResolvedExecutableInputs
 import wom.executable.ExecutableValidation._
 import wom.graph.Graph.ResolvedExecutableInput
 import wom.graph.GraphNodePort.OutputPort
 import wom.graph._
+import wom.types.WomType
+import wom.values.WomValue
 
 object Executable {
 
@@ -26,7 +26,7 @@ object Executable {
    */
   type InputParsingFunction = String => Checked[ParsedInputMap]
   type ParsedInputMap = Map[String, DelayedCoercionFunction]
-  type DelayedCoercionFunction = WdlType => ErrorOr[WdlValue]
+  type DelayedCoercionFunction = WomType => ErrorOr[WomValue]
   
   /*
     * Maps output ports from graph input nodes to ResolvedExecutableInput
@@ -48,7 +48,7 @@ object Executable {
     def fallBack(gin: ExternalGraphInputNode): ErrorOr[ResolvedExecutableInput] = gin match {
       case required: RequiredGraphInputNode => s"Required workflow input '${required.identifier.fullyQualifiedName.value}' not specified".invalidNel
       case optionalWithDefault: OptionalGraphInputNodeWithDefault => Coproduct[ResolvedExecutableInput](optionalWithDefault.default).validNel
-      case optional: OptionalGraphInputNode => Coproduct[ResolvedExecutableInput](optional.womType.none: WdlValue).validNel
+      case optional: OptionalGraphInputNode => Coproduct[ResolvedExecutableInput](optional.womType.none: WomValue).validNel
     }
 
     graph.inputNodes.collect({
