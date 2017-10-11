@@ -4,12 +4,12 @@ import java.util.regex.Pattern
 
 import cats.data.Validated.Valid
 import lenthall.util.TryUtil
+import util.StringUtil
 import wdl4s.parser.WdlParser._
 import wdl.AstTools._
 import wdl.command.{ParameterCommandPart, StringCommandPart, WdlCommandPart}
 import wdl.expression.{WdlFunctions, WdlStandardLibraryFunctions}
 import wdl.types.WdlOptionalType
-import wdl.util.StringUtil
 import wdl.values.{WdlFile, WdlValue}
 import wom.callable.Callable.{InputDefinitionWithDefault, OptionalInputDefinition, RequiredInputDefinition}
 import wom.callable.{Callable, TaskDefinition}

@@ -3,7 +3,7 @@ package cromwell
 import cats.data.Validated._
 import cats.syntax.validated._
 import lenthall.validation.ErrorOr.ErrorOr
-import wdl.values.WdlValue
+import wom.values.WomValue
 
 import scala.util.{Failure, Success, Try}
 
@@ -15,8 +15,8 @@ package object core {
   type WorkflowType = String
   type WorkflowTypeVersion = String
   type CallOutputs = Map[String, JobOutput]
-  type HostInputs = Map[String, WdlValue]
-  type EvaluatedRuntimeAttributes = Map[String, WdlValue]
+  type HostInputs = Map[String, WomValue]
+  type EvaluatedRuntimeAttributes = Map[String, WomValue]
 
   implicit class toErrorOr[A](val trySomething: Try[A]) {
     def tryToErrorOr: ErrorOr[A] = trySomething match {
