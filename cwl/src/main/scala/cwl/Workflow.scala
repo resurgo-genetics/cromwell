@@ -29,7 +29,7 @@ case class Workflow private(
 
   val fileNames: List[String] = steps.toList.flatMap(_.run.select[String].toList)
 
-  def outputsTypeMap: WdlTypeMap = steps.foldLeft(Map.empty[String, WdlType]) {
+  def outputsTypeMap: WomTypeMap = steps.foldLeft(Map.empty[String, WdlType]) {
     // Not implemented as a `foldMap` because there is no semigroup instance for `WdlType`s.  `foldMap` doesn't know that
     // we don't need a semigroup instance since the map keys should be unique and therefore map values would never need
     // to be combined under the same key.
@@ -43,10 +43,10 @@ case class Workflow private(
     def cwlTypeForInputParameter(input: InputParameter): Option[CwlType] = input.`type`.flatMap(_.select[CwlType])
 
     def wdlTypeForInputParameter(input: InputParameter): Option[WdlType] = {
-      cwlTypeForInputParameter(input) map cwlTypeToWdlType
+      cwlTypeForInputParameter(input) map cwlTypeToWomType
     }
 
-    val typeMap: WdlTypeMap =
+    val typeMap: WomTypeMap =
       outputsTypeMap ++
         // Note this is only looking at the workflow inputs and not recursing into steps, because our current thinking
         // is that in CWL graph inputs can only be defined at the workflow level.  It's possible that's not actually
@@ -84,7 +84,7 @@ case class Workflow private(
       outputs.toList.traverse[ErrorOr, GraphNode] {
         output =>
 
-          val wdlType = cwlTypeToWdlType(output.`type`.flatMap(_.select[CwlType]).get)
+          val wdlType = cwlTypeToWomType(output.`type`.flatMap(_.select[CwlType]).get)
 
           def lookupOutputSource(outputId: WorkflowOutputId): Checked[OutputPort] =
             for {

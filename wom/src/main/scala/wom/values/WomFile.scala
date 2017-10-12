@@ -1,5 +1,5 @@
 package wom.values
 
-trait WomFile {
+trait WomFile extends WomValue {
 
 }

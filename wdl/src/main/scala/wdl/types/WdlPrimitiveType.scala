@@ -1,7 +1,9 @@
 package wdl.types
 
+import wom.types.WomType
+
 abstract class WdlPrimitiveType extends WdlType {
-  lazy val coercionMap: Map[WdlType, Seq[WdlType]] = Map(
+  lazy val coercionMap: Map[WomType, Seq[WdlType]] = Map(
     // From type -> To type
     WdlStringType -> Seq(WdlStringType, WdlIntegerType, WdlFloatType, WdlFileType, WdlBooleanType),
     WdlFileType -> Seq(WdlStringType, WdlFileType),
@@ -10,7 +12,7 @@ abstract class WdlPrimitiveType extends WdlType {
     WdlBooleanType -> Seq(WdlStringType, WdlBooleanType)
   )
 
-  override def isCoerceableFrom(otherType: WdlType): Boolean = {
+  override def isCoerceableFrom(otherType: WomType): Boolean = {
     coercionMap.get(otherType) match {
       case Some(types) => types contains this
       case None => false

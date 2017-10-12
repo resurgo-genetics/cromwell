@@ -1,8 +1,8 @@
 package wom.types
 
-import wom.values.WomOptionalValue
+import wom.values.WomOptional
 
 trait WomOptionalType extends WomType {
   def memberType: WomType
-  def none: WomOptionalValue
+  def none: WomOptional
 }

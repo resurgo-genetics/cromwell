@@ -1,11 +1,12 @@
 package cwl
 
 import cats.syntax.validated._
+import cwl.values.CwlFile
 import eu.timepit.refined._
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.{:+:, CNil}
 import shapeless.syntax.singleton._
-import wdl.values.{WdlSingleFile, WdlValue}
+import wom.values.WomValue
 
 object CwlType extends Enumeration {
   type CwlType = Value
@@ -35,10 +36,11 @@ case class File private(
   format: Option[String],
   contents: Option[String]) {
 
-  lazy val asWdlValue: ErrorOr[WdlValue] = {
+  lazy val asWomValue: ErrorOr[WomValue] = {
     // TODO WOM: needs to handle basename and maybe other fields. We might need to augment WdlFile, or have a smarter WomFile
+    // TODO WOM: introducing CwlFile! :P
     path.orElse(location) match {
-      case Some(value) => WdlSingleFile(value).validNel
+      case Some(value) => CwlFile(value).validNel
       case None => "Cannot convert CWL File to WdlValue without either a location or a path".invalidNel
     }
   }

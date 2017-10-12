@@ -19,7 +19,7 @@ object RunOutputsToTypeMap extends Poly1 {
           out.
             `type`.
             flatMap(_.select[CwlType]).
-            map(cwlTypeToWdlType).
+            map(cwlTypeToWomType).
             map(out.id -> _).
             toList.
             toMap

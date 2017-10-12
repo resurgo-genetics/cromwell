@@ -3,11 +3,12 @@ package wdl.values
 import wdl.WdlExpressionException
 import wdl.exception.OptionalNotSuppliedException
 import wdl.types.WdlType
+import wom.values.WomValue
 
 import scala.collection.immutable.TreeMap
 import scala.util.{Failure, Try}
 
-trait WdlValue {
+trait WdlValue extends WomValue {
   val wdlType: WdlType
   def invalid(operation: String) = Failure(new WdlExpressionException(s"Cannot perform operation: $operation"))
   def emptyValueFailure(operationName: String) = Failure(OptionalNotSuppliedException(operationName))

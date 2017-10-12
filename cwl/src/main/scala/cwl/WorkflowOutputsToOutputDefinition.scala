@@ -6,7 +6,7 @@ import wom.expression.PlaceholderWomExpression
 
 object WorkflowOutputsToOutputDefinition extends Poly1 {
 
-  def fullIdToOutputDefintition(fullyQualifiedName: String, typeMap: WdlTypeMap) = {
+  def fullIdToOutputDefintition(fullyQualifiedName: String, typeMap: WomTypeMap) = {
 
     //we want to only look at the id, not the filename
     val lookupId = WorkflowStepInputOrOutputId(fullyQualifiedName).ioId
@@ -15,12 +15,12 @@ object WorkflowOutputsToOutputDefinition extends Poly1 {
   }
 
   implicit def a = at[Array[WorkflowStepOutput]] { outputs =>
-    (typeMap: WdlTypeMap) =>
+    (typeMap: WomTypeMap) =>
       outputs.map(output => fullIdToOutputDefintition(output.id, typeMap)).toSet
   }
 
   implicit def b = at[Array[String]] { outputs =>
-    (typeMap: WdlTypeMap) =>
+    (typeMap: WomTypeMap) =>
       outputs.map(fullIdToOutputDefintition(_, typeMap)).toSet
   }
 

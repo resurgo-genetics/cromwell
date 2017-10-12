@@ -9,6 +9,7 @@ import wdl.WdlExpression.{AstForExpressions, AstNodeForExpressions}
 import wdl.expression.ValueEvaluator.InterpolationTagPattern
 import wdl.types._
 import wdl.values._
+import wom.WorkflowSource
 
 import scala.collection.JavaConverters._
 import scala.language.postfixOps

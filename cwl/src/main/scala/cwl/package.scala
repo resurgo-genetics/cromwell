@@ -1,11 +1,11 @@
 
-import cwl.CwlType.CwlType
-import cwl.CwlType._
-import wdl.types._
+import cwl.CwlType.{CwlType, _}
+import cwl.ExpressionEvaluator.{ECMAScriptExpression, ECMAScriptFunction}
+import cwl.types.{CwlNothingType, CwlStringType}
+import lenthall.Checked
 import shapeless._
 import wom.executable.Executable
-import lenthall.Checked
-import cwl.ExpressionEvaluator.{ECMAScriptExpression, ECMAScriptFunction}
+import wom.types.WomType
 
 /**
  * This package is intended to parse all CWL files.
@@ -30,16 +30,16 @@ package object cwl extends TypeAliases {
 
   type Cwl = Workflow :+: CommandLineTool :+: CNil
 
-  def cwlTypeToWdlType : CwlType => WdlType = {
-    case Null => WdlNothingType
-    case Boolean => WdlBooleanType
-    case Int => WdlIntegerType
-    case Long => WdlIntegerType
-    case Float => WdlFloatType
-    case Double => WdlFloatType
-    case String => WdlStringType
-    case CwlType.File => WdlFileType
-    case CwlType.Directory => ???
+  def cwlTypeToWomType : CwlType => WomType = {
+    case Null => CwlNothingType
+//    case Boolean => WdlBooleanType
+//    case Int => WdlIntegerType
+//    case Long => WdlIntegerType
+//    case Float => WdlFloatType
+//    case Double => WdlFloatType
+    case String => CwlStringType
+//    case CwlType.File => WdlFileType
+//    case CwlType.Directory => ???
   }
 
 
@@ -54,7 +54,7 @@ package object cwl extends TypeAliases {
   type Expression = ECMAScriptExpression :+: ECMAScriptFunction :+: CNil
 
 
-  type WdlTypeMap = Map[String, WdlType]
+  type WomTypeMap = Map[String, WomType]
 
   object CwlToWomExecutable extends Poly1 {
     implicit def caseClt = at[CommandLineTool](clt => clt.womExecutable())

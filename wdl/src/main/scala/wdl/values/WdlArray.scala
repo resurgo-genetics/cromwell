@@ -4,6 +4,7 @@ import lenthall.util.TryUtil
 import wdl.TsvSerializable
 import wdl.types._
 import wdl.values.WdlArray.WdlArrayLike
+import wom.values.WomArray
 
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}
@@ -43,11 +44,12 @@ object WdlArray {
   }
 }
 
-sealed abstract case class WdlArray(wdlType: WdlArrayType, value: Seq[WdlValue]) extends WdlValue with WdlArrayLike with TsvSerializable {
+sealed abstract case class WdlArray(wdlType: WdlArrayType, value: Seq[WdlValue]) extends WdlValue with WdlArrayLike with TsvSerializable with WomArray {
 
   val nonEmpty = value.nonEmpty
   override def toWdlString: String = s"[${value.map(_.toWdlString).mkString(", ")}]"
   override def toString = toWdlString
+  override def womType = wdlType
 
   def map[R <: WdlValue](f: WdlValue => R): WdlArray = {
     value.map{f} match {

@@ -4,6 +4,7 @@ import wdl4s.parser.WdlParser
 import wdl.AstTools.EnhancedAstNode
 import wdl.values._
 import wdl.{WdlExpressionException, WdlSyntaxErrorFormatter, WorkflowSource}
+import wom.types.WomType
 
 import scala.collection.JavaConverters._
 import scala.runtime.ScalaRunTime
@@ -11,7 +12,7 @@ import scala.util.{Failure, Success, Try}
 
 class WdlTypeException(message: String) extends RuntimeException(message)
 
-trait WdlType {
+trait WdlType extends WomType {
 
   /**
    * Method to be overridden by implementation classes defining a partial function

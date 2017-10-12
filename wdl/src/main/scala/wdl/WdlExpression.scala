@@ -14,8 +14,11 @@ import wdl.expression._
 import wdl.formatter.{NullSyntaxHighlighter, SyntaxHighlighter}
 import wdl.types._
 import wdl.values._
+import wom.WorkflowSource
 import wom.expression._
 import wom.graph._
+import wom.types.WomType
+import wom.values.WomValue
 
 import scala.collection.JavaConverters._
 import scala.concurrent.Await
@@ -26,7 +29,7 @@ import scala.util.Try
 class WdlExpressionException(message: String = null, cause: Throwable = null) extends RuntimeException(message, cause)
 
 case object NoLookup extends ScopedLookupFunction {
-  def apply(value: String): WdlValue =
+  def apply(value: String): WomValue =
     throw new UnsupportedOperationException(s"No identifiers should be looked up: $value")
 }
 
@@ -68,8 +71,8 @@ object WdlExpression {
 
   val parser = new WdlParser()
 
-  /** Maps from a locally qualified name to a WdlValue. */
-  type ScopedLookupFunction = String => WdlValue
+  /** Maps from a locally qualified name to a WomValue. */
+  type ScopedLookupFunction = String => WomValue
 
   val BinaryOperators = Set(
     "Add", "Subtract", "Multiply", "Divide", "Remainder",
@@ -91,13 +94,13 @@ object WdlExpression {
     "size"
   )
 
-  def evaluate(ast: AstNode, lookup: ScopedLookupFunction, functions: WdlFunctions[WdlValue]): Try[WdlValue] =
+  def evaluate(ast: AstNode, lookup: ScopedLookupFunction, functions: WdlFunctions[WomValue]): Try[WomValue] =
     ValueEvaluator(lookup, functions).evaluate(ast)
 
-  def evaluateFiles(ast: AstNode, lookup: ScopedLookupFunction, functions: WdlFunctions[WdlValue], coerceTo: WdlType = WdlAnyType) =
+  def evaluateFiles(ast: AstNode, lookup: ScopedLookupFunction, functions: WdlFunctions[WomValue], coerceTo: WomType = WdlAnyType) =
     FileEvaluator(ValueEvaluator(lookup, functions), coerceTo).evaluate(ast)
 
-  def evaluateType(ast: AstNode, lookup: (String) => WdlType, functions: WdlFunctions[WdlType], from: Option[Scope] = None) =
+  def evaluateType(ast: AstNode, lookup: (String) => WomType, functions: WdlFunctions[WomType], from: Option[Scope] = None) =
     TypeEvaluator(lookup, functions, from).evaluate(ast)
 
   def fromString(expression: WorkflowSource): WdlExpression = {
@@ -169,16 +172,16 @@ object WdlExpression {
   }
 }
 
-case class WdlExpression(ast: AstNode) extends WdlValue {
+case class WdlExpression(ast: AstNode) extends WomValue {
   override val wdlType = WdlExpressionType
 
-  def evaluate(lookup: ScopedLookupFunction, functions: WdlFunctions[WdlValue]): Try[WdlValue] =
+  def evaluate(lookup: ScopedLookupFunction, functions: WdlFunctions[WomValue]): Try[WomValue] =
     WdlExpression.evaluate(ast, lookup, functions)
 
-  def evaluateFiles(lookup: ScopedLookupFunction, functions: WdlFunctions[WdlValue], coerceTo: WdlType): Try[Seq[WdlFile]] =
+  def evaluateFiles(lookup: ScopedLookupFunction, functions: WdlFunctions[WomValue], coerceTo: WomType): Try[Seq[WdlFile]] =
     WdlExpression.evaluateFiles(ast, lookup, functions, coerceTo)
 
-  def evaluateType(lookup: (String) => WdlType, functions: WdlFunctions[WdlType], from: Option[Scope] = None): Try[WdlType] =
+  def evaluateType(lookup: (String) => WomType, functions: WdlFunctions[WomType], from: Option[Scope] = None): Try[WomType] =
     WdlExpression.evaluateType(ast, lookup, functions, from)
 
   def containsFunctionCall = ast.containsFunctionCalls
@@ -206,29 +209,29 @@ final case class WdlWomExpression(wdlExpression: WdlExpression, from: Option[Sco
   override def sourceString = wdlExpression.valueString
   override def inputs: Set[String] = wdlExpression.variableReferences map { _.fullVariableReferenceString } toSet
 
-  override def evaluateValue(variableValues: Map[String, WdlValue], ioFunctionSet: IoFunctionSet): ErrorOr[WdlValue] = {
+  override def evaluateValue(variableValues: Map[String, WomValue], ioFunctionSet: IoFunctionSet): ErrorOr[WomValue] = {
     lazy val wdlFunctions = WdlStandardLibraryFunctions.fromIoFunctionSet(ioFunctionSet)
     wdlExpression.evaluate(variableValues.apply, wdlFunctions).toErrorOr
   }
 
-  override def evaluateType(inputTypes: Map[String, WdlType]): ErrorOr[WdlType] =
+  override def evaluateType(inputTypes: Map[String, WomType]): ErrorOr[WomType] =
     // All current usages of WdlExpression#evaluateType trace back to WdlNamespace, but this is not the
     // case in the brave new WOM-world.
     wdlExpression.evaluateType(inputTypes.apply, new WdlStandardLibraryFunctionsType, from).toErrorOr
 
-  override def evaluateFiles(inputTypes: Map[String, WdlValue], ioFunctionSet: IoFunctionSet, coerceTo: WdlType): ErrorOr[Set[WdlFile]] ={
+  override def evaluateFiles(inputTypes: Map[String, WomValue], ioFunctionSet: IoFunctionSet, coerceTo: WomType): ErrorOr[Set[WdlFile]] ={
     lazy val wdlFunctions = new WdlStandardLibraryFunctions {
       override def readFile(path: String): String = Await.result(ioFunctionSet.readFile(path), Duration.Inf)
 
       override def writeFile(path: String, content: String): Try[WdlFile] = Try(Await.result(ioFunctionSet.writeFile(path, content), Duration.Inf))
 
-      override def stdout(params: Seq[Try[WdlValue]]): Try[WdlFile] = ioFunctionSet.stdout(params)
+      override def stdout(params: Seq[Try[WomValue]]): Try[WdlFile] = ioFunctionSet.stdout(params)
 
-      override def stderr(params: Seq[Try[WdlValue]]): Try[WdlFile] = ioFunctionSet.stderr(params)
+      override def stderr(params: Seq[Try[WomValue]]): Try[WdlFile] = ioFunctionSet.stderr(params)
 
       override def glob(path: String, pattern: String): Seq[String] = ioFunctionSet.glob(path, pattern)
 
-      override def size(params: Seq[Try[WdlValue]]): Try[WdlFloat] = ioFunctionSet.size(params)
+      override def size(params: Seq[Try[WomValue]]): Try[WdlFloat] = ioFunctionSet.size(params)
     }
     wdlExpression.evaluateFiles(inputTypes.apply, wdlFunctions, coerceTo).toErrorOr.map(_.toSet[WdlFile])
   }
