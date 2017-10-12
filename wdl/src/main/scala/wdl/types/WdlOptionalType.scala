@@ -1,10 +1,11 @@
 package wdl.types
 import spray.json.JsNull
 import wdl.values.{WdlOptionalValue, WdlValue}
+import wom.types.WomOptionalType
 
 import scala.util.Try
 
-case class WdlOptionalType(memberType: WdlType) extends WdlType {
+case class WdlOptionalType(memberType: WdlType) extends WdlType with WomOptionalType {
   /**
     * Method to be overridden by implementation classes defining a partial function
     * for the conversion of raw input values to specific implementation class value types.

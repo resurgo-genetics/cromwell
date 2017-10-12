@@ -76,7 +76,7 @@ trait CallMetadataHelper {
       case empty if empty.isEmpty =>
         List(MetadataEvent.empty(metadataKeyForCall(jobKey, s"${CallMetadataKeys.Outputs}")))
       case _ =>
-        outputs flatMap { case (lqn, outputValue) => wdlValueToMetadataEvents(metadataKeyForCall(jobKey, s"${CallMetadataKeys.Outputs}:$lqn"), outputValue.wdlValue) }
+        outputs flatMap { case (lqn, outputValue) => wdlValueToMetadataEvents(metadataKeyForCall(jobKey, s"${CallMetadataKeys.Outputs}:$lqn"), outputValue.womValue) }
     }
 
     serviceRegistryActor ! PutMetadataAction(completionEvents ++ outputEvents)

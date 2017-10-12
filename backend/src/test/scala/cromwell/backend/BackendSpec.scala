@@ -138,7 +138,7 @@ trait BackendSpec extends ScalaFutures with Matchers with Mockito {
           case (fqn, out) =>
             val expectedOut = expectedOutputs.get(fqn)
             expectedOut.isDefined shouldBe true
-            expectedOut.get.wdlValue.valueString shouldBe out.wdlValue.valueString
+            expectedOut.get.womValue.valueString shouldBe out.womValue.valueString
         }
       case (JobFailedNonRetryableResponse(_, failure, _), JobFailedNonRetryableResponse(_, expectedFailure, _)) =>
         failure.getClass shouldBe expectedFailure.getClass

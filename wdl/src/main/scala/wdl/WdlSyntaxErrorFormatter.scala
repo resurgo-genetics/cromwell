@@ -3,6 +3,7 @@ package wdl
 import wdl.types.WdlType
 import wdl4s.parser.WdlParser._
 import wdl.AstTools.InterpolatedTerminal
+import wom.WorkflowSource
 
 import scala.collection.JavaConverters._
 

@@ -32,7 +32,7 @@ class CallCache(database: CallCachingSqlDatabase) {
         returnCode = b.returnCode,
         allowResultReuse = b.allowResultReuse)
       import cromwell.core.simpleton.WdlValueSimpleton._
-      val result = b.callOutputs.mapValues(_.wdlValue).simplify
+      val result = b.callOutputs.mapValues(_.womValue).simplify
       val jobDetritus = b.jobDetritusFiles.getOrElse(Map.empty)
       buildCallCachingJoin(metaInfo, b.callCacheHashes, result, jobDetritus)
     }

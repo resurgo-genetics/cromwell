@@ -38,7 +38,7 @@ object If {
     val ifConditionGraphInputExpressionValidation = WdlWomExpression.toExpressionNode(WomIdentifier("conditional"), ifConditionExpression, localLookup, Map.empty)
     val ifConditionTypeValidation = ifConditionExpression.evaluateType(localLookup.map { case (k, v) => k -> v.womType }) flatMap {
       case WdlBooleanType => Valid(())
-      case other => s"An if block must be given a boolean expression but instead got '${ifBlock.condition.toWdlString}' (a ${other.toWdlString})".invalidNel
+      case other => s"An if block must be given a boolean expression but instead got '${ifBlock.condition.toWdlString}' (a ${other.toDisplayString})".invalidNel
     }
 
     val innerGraphValidation: ErrorOr[Graph] = WdlGraphNode.buildWomGraph(ifBlock, Set.empty, localLookup)

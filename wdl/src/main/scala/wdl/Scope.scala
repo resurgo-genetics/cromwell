@@ -6,6 +6,7 @@ import wdl.exception.{ScatterIndexNotFound, VariableLookupException, VariableNot
 import wdl.expression.WdlFunctions
 import wdl.values.WdlArray.WdlArrayLike
 import wdl.values.WdlValue
+import wom._
 import wom.graph.WomIdentifier
 
 import scala.util.{Failure, Success, Try}

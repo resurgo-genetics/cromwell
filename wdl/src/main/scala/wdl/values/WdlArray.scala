@@ -49,7 +49,6 @@ sealed abstract case class WdlArray(wdlType: WdlArrayType, value: Seq[WdlValue])
   val nonEmpty = value.nonEmpty
   override def toWdlString: String = s"[${value.map(_.toWdlString).mkString(", ")}]"
   override def toString = toWdlString
-  override def womType = wdlType
 
   def map[R <: WdlValue](f: WdlValue => R): WdlArray = {
     value.map{f} match {

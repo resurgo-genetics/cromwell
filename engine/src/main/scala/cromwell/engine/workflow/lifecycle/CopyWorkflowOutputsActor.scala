@@ -75,7 +75,7 @@ class CopyWorkflowOutputsActor(workflowId: WorkflowId, override val ioActor: Act
       backend <- workflowDescriptor.backendAssignments.values.toSeq
       config <- BackendConfiguration.backendConfigurationDescriptor(backend).toOption.toSeq
       rootPath <- getBackendRootPath(backend, config).toSeq
-      outputFiles = findFiles(workflowOutputs.values.map(_.wdlValue).toSeq).map(_.value)
+      outputFiles = findFiles(workflowOutputs.values.map(_.womValue).toSeq).map(_.value)
     } yield (rootPath, outputFiles)
     
     val outputFileDestinations = rootAndFiles flatMap {

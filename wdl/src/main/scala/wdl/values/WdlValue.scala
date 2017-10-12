@@ -10,6 +10,7 @@ import scala.util.{Failure, Try}
 
 trait WdlValue extends WomValue {
   val wdlType: WdlType
+  override val womType = wdlType
   def invalid(operation: String) = Failure(new WdlExpressionException(s"Cannot perform operation: $operation"))
   def emptyValueFailure(operationName: String) = Failure(OptionalNotSuppliedException(operationName))
   def evaluateIfDefined[A <: WdlValue](operationName: String, optionalValue: WdlOptionalValue, operation: WdlValue => Try[A]): Try[A] = optionalValue match {

@@ -1,10 +1,11 @@
 package wdl.values
 
 import wdl.types.{WdlOptionalType, WdlType}
+import wom.values.WomOptional
 
 import scala.util.Try
 
-case class WdlOptionalValue(innerType: WdlType, value: Option[WdlValue]) extends WdlValue {
+case class WdlOptionalValue(innerType: WdlType, value: Option[WdlValue]) extends WdlValue with WomOptional {
   override val wdlType = WdlOptionalType(innerType)
   override val toWdlString = value map { _.toWdlString } getOrElse "null"
 

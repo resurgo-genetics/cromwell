@@ -594,7 +594,7 @@ case class WorkflowExecutionActor(workflowDescriptor: EngineWorkflowDescriptor,
       case Failure(e) => Failure(new RuntimeException(s"Failed to collect output shards for call ${collector.tag}", e))
       case Success(outputs) =>
         val adjustedOutputs: CallOutputs = if (isInBypassed) {
-          outputs map { output => (output._1, JobOutput(WdlOptionalValue.none(output._2.wdlValue.wdlType) )) }
+          outputs map { output => (output._1, JobOutput(WdlOptionalValue.none(output._2.womValue.wdlType) )) }
         } else outputs
         self ! ScatterCollectionSucceededResponse(collector, adjustedOutputs)
         Success(WorkflowExecutionDiff(Map(collector -> ExecutionStatus.Starting)))

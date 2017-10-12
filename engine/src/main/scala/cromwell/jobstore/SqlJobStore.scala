@@ -44,7 +44,7 @@ class SqlJobStore(sqlDatabase: EngineSqlDatabase) extends JobStore {
           None,
           None)
         val jobStoreResultSimpletons =
-          jobOutputs.mapValues(_.wdlValue).simplify.map {
+          jobOutputs.mapValues(_.womValue).simplify.map {
             wdlValueSimpleton => JobStoreSimpletonEntry(
               wdlValueSimpleton.simpletonKey, wdlValueSimpleton.simpletonValue.valueString.toClobOption,
               wdlValueSimpleton.simpletonValue.wdlType.toWdlString)

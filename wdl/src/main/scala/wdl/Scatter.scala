@@ -43,7 +43,7 @@ object Scatter {
     // Validate the collection evaluates to a traversable type
     val scatterItemTypeValidation = scatterCollectionExpression.evaluateType(localLookup.map { case (k, v) => k -> v.womType }) flatMap {
       case WdlArrayType(itemType) => Valid(itemType) // Covers maps because this is a custom unapply (see WdlArrayType)
-      case other => s"Cannot scatter over a non-traversable type ${other.toWdlString}".invalidNel
+      case other => s"Cannot scatter over a non-traversable type ${other.toDisplayString}".invalidNel
     }
 
     val innerGraphAndScatterItemInputValidation: ErrorOr[(Graph, GraphInputNode)] = for {
