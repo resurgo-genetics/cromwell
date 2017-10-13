@@ -1,4 +1,4 @@
-package wdl.values
+package wom.values
 
 import org.scalatest.{FlatSpec, Matchers, TryValues}
 import wom.types._

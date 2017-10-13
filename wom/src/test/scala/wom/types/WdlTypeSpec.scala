@@ -1,4 +1,4 @@
-package wdl.types
+package wom.types
 
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.prop.Tables.Table

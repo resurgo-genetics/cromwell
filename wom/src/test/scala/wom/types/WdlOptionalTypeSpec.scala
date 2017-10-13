@@ -1,4 +1,4 @@
-package wdl.types
+package wom.types
 
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}

@@ -1,4 +1,4 @@
-package wdl.types
+package wom.types
 
 import org.scalatest.{FlatSpec, Matchers}
 import spray.json.{JsArray, JsNumber}
