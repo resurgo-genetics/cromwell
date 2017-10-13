@@ -4,8 +4,8 @@ import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.WdlExpression
 import wdl.exception.OptionalNotSuppliedException
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success, Try}
 

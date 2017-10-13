@@ -1,6 +1,6 @@
 package cromwell.backend.validation
 
-import wdl.types._
+import wom.types.{WdlArrayType, WdlBooleanType, WdlIntegerType, WdlType}
 
 object ContinueOnReturnCode {
   val validWdlTypes = Set[WdlType](WdlArrayType(WdlIntegerType), WdlBooleanType, WdlIntegerType)

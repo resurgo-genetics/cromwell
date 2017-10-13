@@ -1,9 +1,9 @@
 package cromwell
 
-import wdl.types.{WdlFileType, WdlStringType}
 import wdl.{ImportResolver, WdlNamespaceWithWorkflow, WorkflowInput}
 import cromwell.util.SampleWdl
 import org.scalatest.{Matchers, WordSpecLike}
+import wom.types.{WdlFileType, WdlStringType}
 
 
 class DeclarationWorkflowSpec extends Matchers with WordSpecLike {

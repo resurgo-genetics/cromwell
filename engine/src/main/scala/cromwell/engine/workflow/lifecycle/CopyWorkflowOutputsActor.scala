@@ -13,7 +13,7 @@ import cromwell.core.path.{Path, PathCopier, PathFactory}
 import cromwell.engine.EngineWorkflowDescriptor
 import cromwell.engine.backend.{BackendConfiguration, CromwellBackends}
 import cromwell.filesystems.gcs.batch.GcsBatchCommandBuilder
-import wdl.values.{WdlArray, WdlMap, WdlSingleFile, WdlValue}
+import wom.values.{WdlArray, WdlMap, WdlSingleFile, WdlValue}
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}

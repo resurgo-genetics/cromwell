@@ -1,9 +1,9 @@
-package wdl.types
+package wom.types
 
-import wdl.values.{WdlInteger, WdlString}
 import spray.json.{JsNumber, JsString}
+import wom.values.{WdlInteger, WdlString}
 
-import scala.util.{Try, Success}
+import scala.util.{Success, Try}
 
 case object WdlIntegerType extends WdlPrimitiveType {
   val toWdlString: String = "Int"

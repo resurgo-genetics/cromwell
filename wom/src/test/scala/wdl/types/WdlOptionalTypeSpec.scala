@@ -2,7 +2,8 @@ package wdl.types
 
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.values.{WdlArray, WdlFile, WdlInteger, WdlMap, WdlOptionalValue, WdlString}
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success}
 

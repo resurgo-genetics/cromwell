@@ -4,9 +4,9 @@ import lenthall.collections.EnhancedCollections._
 import wdl4s.parser.WdlParser.Ast
 import wdl.exception.{ScatterIndexNotFound, VariableLookupException, VariableNotFoundException}
 import wdl.expression.WdlFunctions
-import wdl.values.WdlArray.WdlArrayLike
-import wdl.values.WdlValue
 import wom.graph.WomIdentifier
+import wom.values.WdlArray.WdlArrayLike
+import wom.values.WdlValue
 
 import scala.util.{Failure, Success, Try}
 import scalax.collection.Graph

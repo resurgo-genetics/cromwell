@@ -1,4 +1,4 @@
-package wdl.types
+package wom.types
 
 abstract class WdlPrimitiveType extends WdlType {
   lazy val coercionMap: Map[WdlType, Seq[WdlType]] = Map(

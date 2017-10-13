@@ -4,7 +4,7 @@ import eu.timepit.refined.api.Refined
 import eu.timepit.refined.string.MatchesRegex
 import shapeless.Witness
 import wdl.util.JsUtil
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 // http://www.commonwl.org/v1.0/CommandLineTool.html#Expressions
 object ExpressionEvaluator {

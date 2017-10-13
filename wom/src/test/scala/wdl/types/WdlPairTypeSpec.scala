@@ -4,9 +4,11 @@ import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}
 import spray.json._
 import wdl.WdlNamespaceWithWorkflow
-import wdl.values.{WdlArray, WdlInteger, WdlMap, WdlPair, WdlString}
+import wom.types._
+import wom.values.{WdlInteger, WdlMap, WdlPair, WdlString}
 
 import scala.util.{Failure, Success}
+import wom.values._
 
 class WdlPairTypeSpec extends FlatSpec with Matchers {
 

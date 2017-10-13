@@ -1,7 +1,7 @@
-package wdl.values
+package wom.values
 
 import wdl.WdlExpressionException
-import wdl.types.WdlFloatType
+import wom.types.WdlFloatType
 
 import scala.util.{Failure, Success, Try}
 

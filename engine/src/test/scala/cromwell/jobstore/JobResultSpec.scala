@@ -3,10 +3,11 @@ package cromwell.jobstore
 import cromwell.core.JobOutput
 import cromwell.jobstore.JobResultJsonFormatter._
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.values.WdlString
 import spray.json._
-import wdl.types.{WdlIntegerType, WdlMapType, WdlStringType}
-import wdl.values._
+import wom.types.WdlMapType
+import wom.values._
+import wom.types.{WdlIntegerType, WdlMapType, WdlStringType}
+import wom.values.{WdlInteger, WdlMap, WdlString}
 
 class JobResultSpec extends FlatSpec with Matchers {
 

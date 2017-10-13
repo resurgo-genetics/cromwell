@@ -2,8 +2,8 @@ package wdl.examples
 
 import wdl.WdlNamespaceWithWorkflow
 import wdl.expression.WdlFunctions
-import wdl.types.{WdlArrayType, WdlIntegerType}
-import wdl.values._
+import wom.types.{WdlArrayType, WdlIntegerType}
+import wom.values.{WdlArray, WdlFile, WdlInteger, WdlString, WdlValue}
 
 import scala.util.{Success, Try}
 

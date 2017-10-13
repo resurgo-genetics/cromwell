@@ -1,6 +1,6 @@
-package wdl.values
+package wom.values
 
-import wdl.types.WdlBooleanType
+import wom.types.WdlBooleanType
 
 import scala.util.{Success, Try}
 

@@ -6,11 +6,11 @@ import lenthall.validation.Checked._
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import shapeless.Coproduct
-import wdl.types.{WdlIntegerType, WdlStringType}
-import wdl.values.{WdlFile, WdlInteger, WdlOptionalValue, WdlString, WdlValue}
 import wdl.{WdlNamespace, WdlNamespaceWithWorkflow}
 import wom.executable.Executable.ResolvedExecutableInputs
 import wom.graph.Graph.ResolvedExecutableInput
+import wom.types._
+import wom.values._
 
 class WdlInputValidationSpec extends FlatSpec with Matchers with BeforeAndAfterAll with TableDrivenPropertyChecks {
 

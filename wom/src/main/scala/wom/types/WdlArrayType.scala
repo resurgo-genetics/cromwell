@@ -1,9 +1,9 @@
-package wdl.types
+package wom.types
 
 import lenthall.util.TryUtil
 import spray.json.JsArray
-import wdl.values.WdlArray.WdlArrayLike
-import wdl.values.{WdlArray, WdlFile, WdlString, WdlValue}
+import wom.values.WdlArray.WdlArrayLike
+import wom.values.{WdlArray, WdlFile, WdlString, WdlValue}
 
 import scala.collection.JavaConverters._
 import scala.util.{Failure, Success}

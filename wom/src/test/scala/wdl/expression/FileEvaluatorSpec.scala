@@ -3,8 +3,8 @@ package wdl.expression
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.WdlExpression
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 
 class FileEvaluatorSpec extends FlatSpec with Matchers {

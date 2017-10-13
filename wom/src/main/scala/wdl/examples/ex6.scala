@@ -2,7 +2,7 @@ package wdl.examples
 
 import wdl.WdlNamespaceWithWorkflow
 import wdl.expression.NoFunctions
-import wdl.values.{WdlString, WdlValue}
+import wom.values.{WdlString, WdlValue}
 
 object ex6 {
   def main(args: Array[String]): Unit = {

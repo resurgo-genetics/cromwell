@@ -1,10 +1,10 @@
 package wdl.expression
 
-import wdl.types._
-import wdl.values._
-import wdl.{SampleWdl, WdlNamespaceWithWorkflow, WdlExpression}
+import wdl.{SampleWdl, WdlExpression, WdlNamespaceWithWorkflow}
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}
+import wom.types._
+import wom.values.WdlPrimitive
 
 import scala.util.{Failure, Success, Try}
 

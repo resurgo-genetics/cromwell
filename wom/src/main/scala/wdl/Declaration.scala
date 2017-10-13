@@ -2,10 +2,10 @@ package wdl
 
 import cats.data.Validated.Valid
 import lenthall.validation.ErrorOr.{ErrorOr, ShortCircuitingFlatMap}
-import wdl4s.parser.WdlParser.{Ast, AstNode}
 import wdl.AstTools.EnhancedAstNode
-import wdl.types.{WdlArrayType, WdlOptionalType, WdlType}
+import wdl4s.parser.WdlParser.{Ast, AstNode}
 import wom.graph._
+import wom.types.{WdlArrayType, WdlOptionalType, WdlType}
 
 object DeclarationInterface {
   /**

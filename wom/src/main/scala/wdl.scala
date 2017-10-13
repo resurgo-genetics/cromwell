@@ -1,6 +1,6 @@
 
 import wdl.exception.OutputVariableLookupException
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 import scala.util.{Failure, Try}
 

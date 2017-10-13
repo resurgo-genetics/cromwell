@@ -4,9 +4,9 @@ import lenthall.util.TryUtil
 import wdl.AstTools.EnhancedAstNode
 import wdl.WdlExpression._
 import wdl.{TernaryIf, WdlExpressionException}
-import wdl.types._
-import wdl.values._
 import wdl4s.parser.WdlParser.{Ast, AstNode}
+import wom.types._
+import wom.values._
 
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}

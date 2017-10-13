@@ -1,6 +1,6 @@
-package wdl.values
+package wom.values
 
-import wdl.types.{WdlFileType, WdlType}
+import wom.types.{WdlFileType, WdlType}
 
 import scala.util.{Success, Try}
 

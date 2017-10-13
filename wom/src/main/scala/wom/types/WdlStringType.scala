@@ -1,7 +1,7 @@
-package wdl.types
+package wom.types
 
 import spray.json.JsString
-import wdl.values.{WdlFile, WdlPrimitive, WdlString}
+import wom.values.{WdlFile, WdlPrimitive, WdlString}
 
 import scala.util.{Success, Try}
 

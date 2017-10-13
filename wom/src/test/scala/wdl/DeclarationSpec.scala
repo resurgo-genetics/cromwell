@@ -2,8 +2,8 @@ package wdl
 
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.expression.NoFunctions
-import wdl.types.{WdlStringType, _}
-import wdl.values.{WdlOptionalValue, WdlString, WdlValue}
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success}
 

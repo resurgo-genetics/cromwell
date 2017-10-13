@@ -2,8 +2,10 @@ package wdl.values
 
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.expression.NoFunctions
-import wdl.types.{WdlArrayType, WdlIntegerType}
 import wdl.{NoLookup, WdlExpression}
+import wom.types.{WdlArrayType, WdlIntegerType}
+import wom.values.WdlArray
+
 import scala.util.Success
 
 class LargeArraySpec extends FlatSpec with Matchers {

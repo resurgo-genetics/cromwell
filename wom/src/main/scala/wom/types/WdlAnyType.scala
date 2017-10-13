@@ -1,6 +1,6 @@
-package wdl.types
+package wom.types
 
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 case object WdlAnyType extends WdlType {
   val toWdlString: String = s"Any"

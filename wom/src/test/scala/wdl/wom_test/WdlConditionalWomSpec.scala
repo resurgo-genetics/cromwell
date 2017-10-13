@@ -3,10 +3,10 @@ package wdl.wom_test
 import cats.data.Validated.{Invalid, Valid}
 import lenthall.collections.EnhancedCollections._
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types._
 import wdl.{WdlNamespace, WdlNamespaceWithWorkflow}
-import wom.graph._
 import wom.graph.GraphNodePort.ConditionalOutputPort
+import wom.graph._
+import wom.types.{WdlBooleanType, WdlIntegerType, WdlOptionalType, WdlStringType}
 
 class WdlConditionalWomSpec extends FlatSpec with Matchers {
 

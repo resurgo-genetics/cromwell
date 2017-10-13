@@ -7,7 +7,7 @@ import scala.util.Try
 import wom.executable.Executable.InputParsingFunction
 import wom.executable.Executable.ParsedInputMap
 import wom.executable.Executable
-import wdl.types.WdlType
+import wom.types.WdlType
 
 private [wdl] object WdlInputParsing {
 

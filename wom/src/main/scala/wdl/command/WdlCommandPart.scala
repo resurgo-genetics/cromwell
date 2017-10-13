@@ -1,11 +1,11 @@
 package wdl.command
 
 import wdl.expression.{WdlFunctions, WdlStandardLibraryFunctions}
-import wdl.values.WdlValue
 import wdl._
 import wom.CommandPart
 import wom.graph.LocalName
 import wom.expression.IoFunctionSet
+import wom.values.WdlValue
 
 trait WdlCommandPart extends CommandPart {
   def instantiate(declarations: Seq[Declaration],

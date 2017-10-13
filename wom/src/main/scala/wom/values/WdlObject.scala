@@ -1,8 +1,9 @@
-package wdl.values
+package wom.values
 
-import wdl.types._
+import wdl.WdlCall
 import wdl.util.FileUtil
-import wdl.{TsvSerializable, WdlCall}
+import wom.TsvSerializable
+import wom.types._
 
 import scala.util.{Failure, Success, Try}
 

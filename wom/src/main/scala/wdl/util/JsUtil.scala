@@ -3,8 +3,8 @@ package wdl.util
 import javax.script.{ScriptContext, SimpleScriptContext}
 
 import jdk.nashorn.api.scripting.{ClassFilter, NashornScriptEngineFactory, ScriptObjectMirror}
-import wdl.types.{WdlArrayType, WdlMapType, WdlNothingType, WdlStringType}
-import wdl.values.{WdlArray, WdlBoolean, WdlFloat, WdlInteger, WdlMap, WdlOptionalValue, WdlString, WdlValue}
+import wom.types.{WdlArrayType, WdlMapType, WdlNothingType, WdlStringType}
+import wom.values._
 
 import scala.collection.JavaConverters._
 

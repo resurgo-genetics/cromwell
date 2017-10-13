@@ -4,17 +4,18 @@ import cats.instances.list._
 import cats.syntax.apply._
 import cats.syntax.foldable._
 import shapeless.Coproduct
-import wdl4s.parser.WdlParser.{Ast, SyntaxError, Terminal}
 import wdl.AstTools.EnhancedAstNode
 import wdl.exception.{ValidationException, VariableLookupException, VariableNotFoundException}
 import wdl.expression.WdlFunctions
-import wdl.types.WdlOptionalType
-import wdl.values._
+import wdl4s.parser.WdlParser.{Ast, SyntaxError, Terminal}
 import wom.callable.Callable
 import wom.callable.Callable._
 import wom.graph.CallNode._
 import wom.graph.GraphNodePort.OutputPort
 import wom.graph._
+import wom.types.WdlOptionalType
+import wom.values.{WdlOptionalValue, WdlValue}
+
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}
 

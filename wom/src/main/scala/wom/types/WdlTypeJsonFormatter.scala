@@ -1,7 +1,7 @@
-package wdl.types
+package wom.types
 
-import wdl.{FullyQualifiedName, WorkflowInput}
 import spray.json._
+import wdl.{FullyQualifiedName, WorkflowInput}
 
 object WdlTypeJsonFormatter extends DefaultJsonProtocol {
   implicit object WdlTypeJsonFormat extends RootJsonFormat[WdlType] {

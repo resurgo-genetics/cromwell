@@ -2,9 +2,9 @@ package wdl.wom_test
 
 import cats.data.Validated.{Invalid, Valid}
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types.{WdlArrayType, WdlIntegerType, WdlMaybeEmptyArrayType, WdlStringType}
 import wdl.{ImportResolver, WdlNamespace, WdlNamespaceWithWorkflow}
 import wom.graph.{ExpressionNode, Graph, TaskCallNode, WorkflowCallNode}
+import wom.types.{WdlArrayType, WdlIntegerType, WdlMaybeEmptyArrayType, WdlStringType}
 
 class WdlSubworkflowWomSpec extends FlatSpec with Matchers {
 

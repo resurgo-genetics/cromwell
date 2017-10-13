@@ -1,9 +1,9 @@
-package wdl.types
+package wom.types
 
-import wdl.values.WdlBoolean
 import spray.json.{JsBoolean, JsString}
+import wom.values.WdlBoolean
 
-import scala.util.{Try, Success}
+import scala.util.{Success, Try}
 
 case object WdlBooleanType extends WdlPrimitiveType {
   val toWdlString: String = "Boolean"

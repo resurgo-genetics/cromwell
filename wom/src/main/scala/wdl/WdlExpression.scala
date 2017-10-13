@@ -11,11 +11,12 @@ import wdl4s.parser.WdlParser.{Ast, AstList, AstNode, Terminal}
 import wdl.AstTools.{EnhancedAstNode, VariableReference}
 import wdl.WdlExpression._
 import wdl.expression._
-import wdl.formatter.{NullSyntaxHighlighter, SyntaxHighlighter}
 import wdl.types._
-import wdl.values._
+import wdl.formatter.{NullSyntaxHighlighter, SyntaxHighlighter}
 import wom.expression._
 import wom.graph._
+import wom.types.{WdlAnyType, WdlType}
+import wom.values.{WdlFile, WdlFloat, WdlValue}
 
 import scala.collection.JavaConverters._
 import scala.concurrent.Await

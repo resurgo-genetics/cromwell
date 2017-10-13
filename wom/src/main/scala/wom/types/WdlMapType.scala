@@ -1,7 +1,7 @@
-package wdl.types
+package wom.types
 
-import wdl.values._
 import spray.json.JsObject
+import wom.values.{WdlMap, WdlObject}
 
 case class WdlMapType(keyType: WdlType, valueType: WdlType) extends WdlType {
   val toWdlString: String = s"Map[${keyType.toWdlString}, ${valueType.toWdlString}]"

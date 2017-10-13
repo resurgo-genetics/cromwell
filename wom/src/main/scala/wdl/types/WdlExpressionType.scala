@@ -1,6 +1,7 @@
 package wdl.types
 
 import wdl.WdlExpression
+import wom.types.WdlType
 
 case object WdlExpressionType extends WdlType {
   override def toWdlString: String = "Expression"

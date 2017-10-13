@@ -1,9 +1,9 @@
-package wdl.types
+package wom.types
 
-import wdl.values.{WdlFloat, WdlString}
 import spray.json.{JsNumber, JsString}
+import wom.values.{WdlFloat, WdlString}
 
-import scala.util.{Try, Success}
+import scala.util.{Success, Try}
 
 case object WdlFloatType extends WdlPrimitiveType {
   val toWdlString: String = "Float"

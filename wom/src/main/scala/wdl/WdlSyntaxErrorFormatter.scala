@@ -1,8 +1,8 @@
 package wdl
 
-import wdl.types.WdlType
 import wdl4s.parser.WdlParser._
 import wdl.AstTools.InterpolatedTerminal
+import wom.types.WdlType
 
 import scala.collection.JavaConverters._
 

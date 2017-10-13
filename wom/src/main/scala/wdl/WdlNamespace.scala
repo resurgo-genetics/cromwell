@@ -4,26 +4,26 @@ import java.nio.file.{Path, Paths}
 
 import better.files._
 import cats.effect.IO
+import com.softwaremill.sttp._
+import com.softwaremill.sttp.asynchttpclient.cats.AsyncHttpClientCatsBackend
 import lenthall.Checked
 import lenthall.util.TryUtil
-import wdl4s.parser.WdlParser._
 import wdl.AstTools.{AstNodeName, EnhancedAstNode}
 import wdl.command.ParameterCommandPart
 import wdl.exception._
 import wdl.expression.{NoFunctions, WdlStandardLibraryFunctions, WdlStandardLibraryFunctionsType}
-import wdl.types._
-import wdl.values._
+import wdl.types.WdlNamespaceType
+import wdl4s.parser.WdlParser._
 import wom.executable.Executable
+import wom.types._
+import wom.values.{WdlOptionalValue, WdlValue}
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable
-import scala.util.{Failure, Success, Try}
-import com.softwaremill.sttp._
-import com.softwaremill.sttp.asynchttpclient.cats.AsyncHttpClientCatsBackend
-
 import scala.concurrent.Await
 import scala.concurrent.duration._
 import scala.language.postfixOps
+import scala.util.{Failure, Success, Try}
 
 
 /**

@@ -1,8 +1,8 @@
-package wdl.types
+package wom.types
 
 import spray.json.JsObject
 import wdl.WdlCall
-import wdl.values._
+import wom.values._
 
 import scala.util.{Failure, Success, Try}
 

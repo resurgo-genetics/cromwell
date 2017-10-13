@@ -5,8 +5,8 @@ import org.scalatest.enablers.Aggregating._
 import org.scalatest.{Matchers, WordSpec}
 import wdl.expression.NoFunctions
 import wdl4s.parser.WdlParser.SyntaxError
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success}
 

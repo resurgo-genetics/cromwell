@@ -1,8 +1,9 @@
 package wdl.types
 
-import wdl.values.{WdlMap, WdlObject, WdlString}
-import wdl4s.parser.WdlParser.SyntaxError
 import org.scalatest.{FlatSpec, Matchers}
+import wdl4s.parser.WdlParser.SyntaxError
+import wom.types.{WdlMapType, WdlObjectType, WdlStringType}
+import wom.values.{WdlMap, WdlObject, WdlString}
 
 import scala.util.{Failure, Success}
 

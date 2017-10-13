@@ -4,10 +4,10 @@ import lenthall.validation.ErrorOr.ErrorOr
 import wdl._
 import wdl.expression.WdlFunctions
 import wdl.util.StringUtil
-import wdl.values.WdlValue
 import wom.expression.IoFunctionSet
 import wom.graph.{Graph, TaskCall}
-import wom.{CommandPart, RuntimeAttributes, WomEvaluatedCallInputs}
+import wom.values.{WdlValue, WomEvaluatedCallInputs}
+import wom.{CommandPart, RuntimeAttributes}
 
 import scala.util.Try
 

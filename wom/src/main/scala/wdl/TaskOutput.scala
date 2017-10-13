@@ -2,9 +2,9 @@ package wdl
 
 import wdl4s.parser.WdlParser.Ast
 import wdl.AstTools.EnhancedAstNode
-import wdl.types.WdlType
 import wom.callable.Callable.OutputDefinition
 import wom.graph._
+import wom.types.WdlType
 
 object TaskOutput {
   def apply(ast: Ast, syntaxErrorFormatter: WdlSyntaxErrorFormatter, parent: Option[Scope]): TaskOutput = {

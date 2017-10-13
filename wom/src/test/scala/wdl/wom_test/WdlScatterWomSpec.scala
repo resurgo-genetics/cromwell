@@ -3,10 +3,10 @@ package wdl.wom_test
 import lenthall.collections.EnhancedCollections._
 import cats.data.Validated.{Invalid, Valid}
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types.{WdlArrayType, WdlIntegerType, WdlStringType}
 import wdl.{WdlNamespace, WdlNamespaceWithWorkflow}
 import wom.graph.GraphNodePort.ScatterGathererPort
 import wom.graph.{GraphInputNode, ScatterNode, _}
+import wom.types.{WdlArrayType, WdlIntegerType, WdlStringType}
 
 class WdlScatterWomSpec extends FlatSpec with Matchers {
 

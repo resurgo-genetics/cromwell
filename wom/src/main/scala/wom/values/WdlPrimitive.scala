@@ -1,3 +1,3 @@
-package wdl.values
+package wom.values
 
 trait WdlPrimitive extends WdlValue

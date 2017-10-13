@@ -1,6 +1,5 @@
 package cromwell.backend
 
-import _root_.wdl.values.WdlValue
 import akka.actor.ActorLogging
 import akka.event.LoggingReceive
 import cromwell.backend.BackendJobExecutionActor._
@@ -10,6 +9,7 @@ import cromwell.backend.wdl.OutputEvaluator.EvaluatedJobOutputs
 import cromwell.core.path.Path
 import cromwell.core.{CallOutputs, ExecutionEvent, JobKey}
 import wom.expression.IoFunctionSet
+import wom.values.WdlValue
 
 import scala.concurrent.Future
 import scala.util.{Success, Try}

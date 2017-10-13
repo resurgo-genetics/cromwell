@@ -4,8 +4,8 @@ import lenthall.util.TerminalUtil
 import wdl.AstTools.EnhancedAstNode
 import wdl.{WdlWorkflow, _}
 import wdl.command.StringCommandPart
-import wdl.types.WdlType
 import wdl4s.parser.WdlParser.{Ast, AstList, AstNode}
+import wom.types.WdlType
 
 import scala.collection.JavaConverters._
 

@@ -1,6 +1,6 @@
-package wdl.values
+package wom.values
 
-import wdl.types.WdlPairType
+import wom.types.WdlPairType
 
 case class WdlPair(left: WdlValue, right: WdlValue) extends WdlValue {
   override val wdlType = WdlPairType(left.wdlType, right.wdlType)

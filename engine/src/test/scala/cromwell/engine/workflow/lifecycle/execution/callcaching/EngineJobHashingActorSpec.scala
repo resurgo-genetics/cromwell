@@ -14,8 +14,8 @@ import org.scalatest.concurrent.Eventually
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpecLike, Matchers}
 import _root_.wdl.command.StringCommandPart
-import _root_.wdl.values.WdlValue
 import wom.graph.WomIdentifier
+import wom.values.WdlValue
 
 class EngineJobHashingActorSpec extends TestKitSuite with FlatSpecLike with Matchers with BackendSpec with TableDrivenPropertyChecks with Eventually {
   behavior of "EngineJobHashingActor"

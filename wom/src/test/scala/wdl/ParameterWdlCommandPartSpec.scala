@@ -3,8 +3,8 @@ package wdl
 import wdl.command.ParameterCommandPart
 import wdl.expression.NoFunctions
 import wdl4s.parser.WdlParser.SyntaxError
-import wdl.types.WdlStringType
-import wdl.values.{WdlOptionalValue, WdlString}
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success}
 

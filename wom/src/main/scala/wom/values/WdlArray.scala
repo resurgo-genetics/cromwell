@@ -1,9 +1,9 @@
-package wdl.values
+package wom.values
 
 import lenthall.util.TryUtil
-import wdl.TsvSerializable
-import wdl.types._
-import wdl.values.WdlArray.WdlArrayLike
+import wom.TsvSerializable
+import wom.types._
+import wom.values.WdlArray.WdlArrayLike
 
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}

@@ -1,9 +1,10 @@
-package wdl.types
+package wom.types
 
-import wdl4s.parser.WdlParser
 import wdl.AstTools.EnhancedAstNode
-import wdl.values._
+import wdl.types.WdlExpressionType
 import wdl.{WdlExpressionException, WdlSyntaxErrorFormatter, WorkflowSource}
+import wdl4s.parser.WdlParser
+import wom.values.WdlValue
 
 import scala.collection.JavaConverters._
 import scala.runtime.ScalaRunTime

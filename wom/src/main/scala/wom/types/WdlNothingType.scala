@@ -1,5 +1,6 @@
-package wdl.types
-import wdl.values.WdlValue
+package wom.types
+
+import wom.values.WdlValue
 
 /**
   * For when we need to assign a type to a composite wdl value that was created empty, may I present to you the least

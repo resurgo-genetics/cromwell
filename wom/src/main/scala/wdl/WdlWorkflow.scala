@@ -5,9 +5,9 @@ import lenthall.validation.ErrorOr.ErrorOr
 import wdl4s.parser.WdlParser._
 import wdl.AstTools._
 import wdl.expression.WdlFunctions
-import wdl.types.WdlType
-import wdl.values.WdlValue
 import wom.callable.WorkflowDefinition
+import wom.types.WdlType
+import wom.values.WdlValue
 
 import scala.language.postfixOps
 import scala.util.Try

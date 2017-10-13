@@ -1,7 +1,22 @@
+package wom
 
-import wdl.values.WdlValue
+import org.apache.commons.codec.digest.DigestUtils
 import wom.callable.Callable.InputDefinition
 
-package object wom {
+import scala.util.Try
+
+trait TsvSerializable {
+  def tsvSerialize: Try[String]
+}
+
+package object values {
+
+  type FileHasher = WdlFile => SymbolHash
+
   type WomEvaluatedCallInputs = Map[InputDefinition, WdlValue]
+
+  implicit class HashableString(val value: String) extends AnyVal with Hashable {
+    def md5Sum: String = DigestUtils.md5Hex(value)
+    def md5SumShort: String = value.md5Sum.substring(0, 8)
+  }
 }

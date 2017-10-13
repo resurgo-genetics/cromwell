@@ -19,7 +19,7 @@ import cromwell.core.io._
 import cromwell.core.logging.JobLogging
 import cromwell.core.path.{Path, PathCopier}
 import cromwell.core.simpleton.{WdlValueBuilder, WdlValueSimpleton}
-import wdl.values.WdlFile
+import wom.values.WdlFile
 
 import scala.util.{Failure, Success, Try}
 

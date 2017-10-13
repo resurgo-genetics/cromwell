@@ -1,7 +1,8 @@
-package wdl.values
+package wom.values
 
-import wdl.types.WdlStringType
 import org.apache.commons.lang3.StringEscapeUtils
+import wom.types.WdlStringType
+
 import scala.util.{Success, Try}
 
 case class WdlString(value: String) extends WdlPrimitive {

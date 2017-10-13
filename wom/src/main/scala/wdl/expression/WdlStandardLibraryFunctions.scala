@@ -3,11 +3,12 @@ package wdl.expression
 import cats.instances.try_._
 import cats.syntax.apply._
 import lenthall.exception.AggregatedException
+import wdl.WdlExpressionException
 import wdl.expression.WdlStandardLibraryFunctions.{crossProduct => stdLibCrossProduct, _}
-import wdl.types._
-import wdl.values._
-import wdl.{TsvSerializable, WdlExpressionException}
+import wom.TsvSerializable
 import wom.expression.IoFunctionSet
+import wom.types._
+import wom.values._
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration

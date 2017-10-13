@@ -4,16 +4,16 @@ import java.util.regex.Pattern
 
 import cats.data.Validated.Valid
 import lenthall.util.TryUtil
-import wdl4s.parser.WdlParser._
 import wdl.AstTools._
 import wdl.command.{ParameterCommandPart, StringCommandPart, WdlCommandPart}
 import wdl.expression.{WdlFunctions, WdlStandardLibraryFunctions}
-import wdl.types.WdlOptionalType
 import wdl.util.StringUtil
-import wdl.values.{WdlFile, WdlValue}
+import wdl4s.parser.WdlParser._
 import wom.callable.Callable.{InputDefinitionWithDefault, OptionalInputDefinition, RequiredInputDefinition}
 import wom.callable.{Callable, TaskDefinition}
 import wom.graph.LocalName
+import wom.types.WdlOptionalType
+import wom.values.{WdlFile, WdlValue}
 
 import scala.collection.JavaConverters._
 import scala.language.postfixOps

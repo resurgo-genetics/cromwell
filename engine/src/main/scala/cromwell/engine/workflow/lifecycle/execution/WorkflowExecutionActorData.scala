@@ -7,7 +7,7 @@ import cromwell.core._
 import cromwell.engine.workflow.lifecycle.execution.OutputStore.OutputKey
 import cromwell.engine.workflow.lifecycle.execution.WorkflowExecutionActor.{ExpressionKey, SubWorkflowKey}
 import cromwell.engine.{EngineWorkflowDescriptor, WdlFunctions}
-import _root_.wdl.values.WdlValue
+import wom.values.WdlValue
 
 import scala.language.postfixOps
 

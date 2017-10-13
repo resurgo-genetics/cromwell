@@ -2,7 +2,7 @@ package wdl
 
 import wdl.AstTools.EnhancedAstNode
 import wdl4s.parser.WdlParser.Ast
-import wdl.types.WdlType
+import wom.types.WdlType
 
 object WorkflowOutput {
   def apply(ast: Ast, syntaxErrorFormatter: WdlSyntaxErrorFormatter, parent: Option[Scope]): WorkflowOutput = {

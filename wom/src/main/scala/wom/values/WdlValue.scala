@@ -1,8 +1,8 @@
-package wdl.values
+package wom.values
 
 import wdl.WdlExpressionException
 import wdl.exception.OptionalNotSuppliedException
-import wdl.types.WdlType
+import wom.types.WdlType
 
 import scala.collection.immutable.TreeMap
 import scala.util.{Failure, Try}

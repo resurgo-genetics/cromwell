@@ -8,8 +8,8 @@ import lenthall.validation.ErrorOr._
 import org.scalatest.{Matchers, WordSpecLike}
 import spray.json.{JsBoolean, JsNumber, JsObject, JsString, JsValue}
 import wdl._
-import wdl.values.WdlValue
 import wom.executable.Executable.ResolvedExecutableInputs
+import wom.values.WdlValue
 
 class SparkRuntimeAttributesSpec extends WordSpecLike with Matchers {
 

@@ -9,8 +9,7 @@ import cromwell.core._
 import cromwell.services.metadata.MetadataService._
 import cromwell.services.metadata._
 import wdl._
-import wdl.values.WdlValue
-import wom.WomEvaluatedCallInputs
+import wom.values.{WdlValue, WomEvaluatedCallInputs}
 
 import scala.util.Random
 
