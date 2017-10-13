@@ -4,7 +4,6 @@ import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.{SampleWdl, WdlExpression, WdlNamespaceWithWorkflow}
 import wom.types.{WdlArrayType, WdlMapType, WdlStringType}
-import wom.values._
 
 class WdlValueSpec extends FlatSpec with Matchers {
 

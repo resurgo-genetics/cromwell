@@ -2,7 +2,6 @@ package wom.types
 
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
-import wom.types._
 import wom.values._
 
 import scala.util.{Failure, Success}

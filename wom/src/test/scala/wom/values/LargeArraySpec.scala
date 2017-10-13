@@ -4,7 +4,6 @@ import org.scalatest.{FlatSpec, Matchers}
 import wdl.expression.NoFunctions
 import wdl.{NoLookup, WdlExpression}
 import wom.types.{WdlArrayType, WdlIntegerType}
-import wom.values.WdlArray
 
 import scala.util.Success
 

@@ -5,7 +5,6 @@ import spray.json.{JsArray, JsNumber}
 import wdl.WdlExpression
 import wdl.expression.NoFunctions
 import wdl4s.parser.WdlParser.SyntaxError
-import wom.types._
 import wom.values._
 
 import scala.collection.JavaConverters._

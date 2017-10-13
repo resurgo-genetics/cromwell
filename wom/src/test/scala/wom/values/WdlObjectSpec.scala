@@ -2,7 +2,6 @@ package wom.values
 
 import org.scalatest.{FlatSpec, Matchers, TryValues}
 import wom.types._
-import wom.values._
 
 object WdlObjectSpec {
   implicit class Trimmer(val string: String) extends AnyVal {

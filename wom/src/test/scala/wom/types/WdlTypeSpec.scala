@@ -5,7 +5,6 @@ import org.scalatest.prop.Tables.Table
 import org.scalatest.{FlatSpec, Matchers}
 import spray.json.JsString
 import wdl4s.parser.WdlParser.SyntaxError
-import wom.types._
 import wom.values._
 
 import scala.runtime.ScalaRunTime

@@ -3,7 +3,6 @@ package wom.types
 import org.scalatest.{FlatSpec, Matchers}
 import spray.json.{JsNumber, JsObject}
 import wdl4s.parser.WdlParser.SyntaxError
-import wom.types.{WdlIntegerType, WdlMapType, WdlStringType}
 import wom.values.{WdlInteger, WdlMap, WdlObject, WdlString}
 
 import scala.util.{Failure, Success}
