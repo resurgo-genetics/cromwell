@@ -6,8 +6,8 @@ import cromwell.core.simpleton.WdlValueSimpleton._
 import cromwell.database.migration.WdlTransformation
 import cromwell.database.migration.custom.BatchedTaskChange
 import wdl.WdlExpression
-import wdl.types.WdlType
-import wdl.values.WdlValue
+import wom.types.WdlType
+import wom.values.WdlValue
 
 import scala.util.{Failure, Success, Try}
 

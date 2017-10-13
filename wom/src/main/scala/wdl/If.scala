@@ -5,7 +5,7 @@ import cats.syntax.apply._
 import cats.syntax.validated._
 import lenthall.validation.ErrorOr._
 import wdl4s.parser.WdlParser.Ast
-import wdl.types.WdlBooleanType
+import wom.types.WdlBooleanType
 import wom.graph.ConditionalNode.ConditionalNodeWithNewNodes
 import wom.graph._
 /**

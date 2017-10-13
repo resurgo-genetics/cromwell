@@ -1,7 +1,7 @@
 package wdl
 
 import wdl4s.parser.WdlParser.Ast
-import wdl.types.WdlType
+import wom.types.WdlType
 
 final case class CallOutput(call: WdlCall, taskOutput: Output) extends Output {
   override lazy val requiredExpression: WdlExpression = taskOutput.requiredExpression

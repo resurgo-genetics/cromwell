@@ -1,7 +1,7 @@
 package cromwell.backend.wdl
 
 import cromwell.backend.BackendJobDescriptor
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.WomEvaluatedCallInputs
 import wom.expression.IoFunctionSet
 

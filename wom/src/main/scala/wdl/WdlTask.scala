@@ -8,9 +8,9 @@ import wdl4s.parser.WdlParser._
 import wdl.AstTools._
 import wdl.command.{ParameterCommandPart, StringCommandPart, WdlCommandPart}
 import wdl.expression.{WdlFunctions, WdlStandardLibraryFunctions}
-import wdl.types.WdlOptionalType
+import wom.types.WdlOptionalType
 import wdl.util.StringUtil
-import wdl.values.{WdlFile, WdlValue}
+import wom.values.{WdlFile, WdlValue}
 import wom.callable.Callable.{InputDefinitionWithDefault, OptionalInputDefinition, RequiredInputDefinition}
 import wom.callable.{Callable, TaskDefinition}
 import wom.graph.LocalName

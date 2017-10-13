@@ -6,7 +6,7 @@ import cats.syntax.foldable._
 import cats.syntax.traverse._
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.{:+:, CNil, Coproduct}
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.callable.Callable._
 import wom.callable.{Callable, TaskDefinition, WorkflowDefinition}
 import wom.expression.WomExpression

@@ -4,9 +4,10 @@ import cats.instances.try_._
 import cats.syntax.apply._
 import lenthall.exception.AggregatedException
 import wdl.expression.WdlStandardLibraryFunctions.{crossProduct => stdLibCrossProduct, _}
-import wdl.types._
-import wdl.values._
-import wdl.{TsvSerializable, WdlExpressionException}
+import wom.types._
+import wom.values._
+import wdl.WdlExpressionException
+import wom._
 import wom.expression.IoFunctionSet
 
 import scala.concurrent.Await

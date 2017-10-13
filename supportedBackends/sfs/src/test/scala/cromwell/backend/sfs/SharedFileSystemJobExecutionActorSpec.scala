@@ -21,8 +21,8 @@ import org.scalatest.concurrent.PatienceConfiguration.Timeout
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{Assertion, FlatSpecLike, OptionValues}
 import _root_.wdl.LocallyQualifiedName
-import _root_.wdl.types._
-import _root_.wdl.values._
+import wom.types._
+import wom.values._
 import wom.graph.TaskCallNode
 
 import scala.concurrent.duration._

@@ -2,7 +2,7 @@ package wdl
 
 import wdl4s.parser.WdlParser.Ast
 import wdl.AstTools.EnhancedAstNode
-import wdl.types.WdlType
+import wom.types.WdlType
 import wom.callable.Callable.OutputDefinition
 import wom.graph._
 

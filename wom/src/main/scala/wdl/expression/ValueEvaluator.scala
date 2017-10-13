@@ -4,8 +4,8 @@ import lenthall.util.TryUtil
 import wdl4s.parser.WdlParser.{Ast, AstNode, Terminal}
 import wdl.AstTools.EnhancedAstNode
 import wdl.WdlExpression._
-import wdl.types._
-import wdl.values.{WdlValue, _}
+import wom.types._
+import wom.values.{WdlValue, _}
 import wdl.{TernaryIf, _}
 
 import scala.util.{Failure, Success, Try}

@@ -9,7 +9,7 @@ import cats.syntax.validated._
 import lenthall.collections.EnhancedCollections._
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.{:+:, CNil}
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.expression.WomExpression
 import wom.graph.GraphNodePort.InputPort
 

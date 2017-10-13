@@ -9,8 +9,8 @@ import cromwell.util.WomMocks
 import lenthall.validation.ErrorOr.ErrorOr
 import org.scalatest.{FlatSpec, Matchers}
 import org.specs2.mock.Mockito
-import wdl.types.{WdlIntegerType, WdlType}
-import wdl.values.{WdlFile, WdlInteger, WdlValue}
+import wom.types.{WdlIntegerType, WdlType}
+import wom.values.{WdlFile, WdlInteger, WdlValue}
 import wom.callable.Callable.{InputDefinition, OutputDefinition, RequiredInputDefinition}
 import wom.expression.{IoFunctionSet, WomExpression}
 import wom.graph.WomIdentifier

@@ -4,9 +4,9 @@ import wdl.AstTools.EnhancedAstNode
 import wdl._
 import wdl.exception.{OptionalNotSuppliedException, VariableNotFoundException}
 import wdl.expression.WdlFunctions
-import wdl.values._
+import wom.values._
 import wdl4s.parser.WdlParser.{Ast, SyntaxError, Terminal}
-import wdl.types.WdlOptionalType
+import wom.types.WdlOptionalType
 
 import scala.language.postfixOps
 import scala.util.{Failure, Success, Try}

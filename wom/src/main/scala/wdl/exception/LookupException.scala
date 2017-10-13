@@ -2,7 +2,7 @@ package wdl.exception
 
 import lenthall.exception.ThrowableAggregation
 import wdl.{Declaration, WdlGraphNode}
-import wdl.types.WdlType
+import wom.types.WdlType
 
 sealed trait LookupException { this: Exception => }
 

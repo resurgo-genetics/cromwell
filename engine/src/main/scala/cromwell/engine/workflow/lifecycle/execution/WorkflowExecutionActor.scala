@@ -24,8 +24,8 @@ import lenthall.util.TryUtil
 import lenthall.validation.ErrorOr.ErrorOr
 import org.apache.commons.lang3.StringUtils
 import wdl._
-import wdl.types.WdlType
-import wdl.values.{WdlOptionalValue, WdlString, WdlValue}
+import wom.types.WdlType
+import wom.values.{WdlOptionalValue, WdlString, WdlValue}
 import wom.expression.IoFunctionSet
 import wom.graph.GraphNodePort.{InputPort, OutputPort}
 import wom.graph._

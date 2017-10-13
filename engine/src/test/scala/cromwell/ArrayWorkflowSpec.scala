@@ -5,8 +5,8 @@ import cromwell.core.Tags.PostWomTest
 import cromwell.core.path.DefaultPathBuilder
 import cromwell.util.SampleWdl
 import wdl.expression.NoFunctions
-import wdl.types.{WdlArrayType, WdlFileType, WdlStringType}
-import wdl.values.{WdlArray, WdlFile, WdlString}
+import wom.types.{WdlArrayType, WdlFileType, WdlStringType}
+import wom.values.{WdlArray, WdlFile, WdlString}
 import wdl.{ImportResolver, WdlNamespaceWithWorkflow}
 
 class ArrayWorkflowSpec extends CromwellTestKitWordSpec {

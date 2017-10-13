@@ -1,7 +1,7 @@
 package wdl.expression
 
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 import wdl.{SampleWdl, WdlNamespaceWithWorkflow, WdlExpression}
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.{FlatSpec, Matchers}

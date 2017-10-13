@@ -3,7 +3,7 @@ package cromwell.backend
 import cromwell.core.{NoIoFunctionSet, WorkflowOptions}
 import cromwell.util.JsonFormatting.WdlValueJsonFormatter
 import lenthall.validation.ErrorOr.ErrorOr
-import _root_.wdl.values.WdlValue
+import wom.values.WdlValue
 import _root_.wdl.{WdlExpressionException, _}
 import wom.RuntimeAttributes
 import wom.callable.Callable.InputDefinition

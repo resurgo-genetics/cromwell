@@ -7,7 +7,7 @@ import shapeless.{:+:, CNil, Poly1, Witness, _}
 import CommandLineTool.BaseCommand
 import CwlType.CwlType
 import CwlVersion._
-import wdl.types.WdlFileType
+import wom.types.WdlFileType
 import wom.callable.Callable.{OutputDefinition, RequiredInputDefinition}
 import wom.callable.{Callable, TaskDefinition}
 import wom.executable.Executable

@@ -2,7 +2,7 @@ package wom.graph
 
 import cats.data.Validated.{Invalid, Valid}
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types.WdlIntegerType
+import wom.types.WdlIntegerType
 import wom.expression._
 
 class ExpressionNodeSpec extends FlatSpec with Matchers {

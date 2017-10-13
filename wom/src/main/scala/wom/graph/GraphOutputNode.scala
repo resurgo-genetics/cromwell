@@ -1,7 +1,7 @@
 package wom.graph
 
 import lenthall.validation.ErrorOr.ErrorOr
-import wdl.types.WdlType
+import wom.types.WdlType
 import wom.expression.WomExpression
 import wom.graph.GraphNodePort.{ConnectedInputPort, GraphNodeOutputPort, OutputPort}
 

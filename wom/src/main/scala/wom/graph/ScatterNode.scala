@@ -1,6 +1,6 @@
 package wom.graph
 
-import wdl.types.WdlArrayType
+import wom.types.WdlArrayType
 import wom.graph.GraphNode.GeneratedNodeAndNewNodes
 import wom.graph.GraphNodePort.{InputPort, OutputPort, ScatterGathererPort}
 

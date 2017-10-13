@@ -5,7 +5,7 @@ import cromwell.core.ExecutionIndex.ExecutionIndex
 import cromwell.engine.workflow.lifecycle.execution.OutputStore
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.Poly1
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.expression.{IoFunctionSet, WomExpression}
 import wom.graph.GraphNodePort.OutputPort
 

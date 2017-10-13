@@ -1,8 +1,8 @@
 package wdl
 
 import wdl.expression.NoFunctions
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 import scala.util.{Failure, Success}
 

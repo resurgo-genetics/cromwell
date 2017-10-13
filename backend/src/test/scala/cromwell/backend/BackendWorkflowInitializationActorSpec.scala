@@ -8,8 +8,8 @@ import cromwell.core.{TestKitSuite, WorkflowOptions}
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpecLike, Matchers}
 import _root_.wdl.WdlExpression
-import _root_.wdl.types._
-import _root_.wdl.values.{WdlArray, WdlBoolean, WdlFloat, WdlInteger, WdlString, WdlValue}
+import wom.types._
+import wom.values.{WdlArray, WdlBoolean, WdlFloat, WdlInteger, WdlString, WdlValue}
 import wom.graph.TaskCallNode
 
 import scala.concurrent.Future

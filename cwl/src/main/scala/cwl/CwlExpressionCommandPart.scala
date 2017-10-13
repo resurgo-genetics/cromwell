@@ -1,6 +1,6 @@
 package cwl
 
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.CommandPart
 import wom.expression.IoFunctionSet
 import wom.graph.LocalName

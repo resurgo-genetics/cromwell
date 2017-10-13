@@ -11,8 +11,8 @@ import cromwell.services.metadata.MetadataService.PutMetadataAction
 import cromwell.services.metadata.{MetadataEvent, MetadataKey, MetadataValue}
 import _root_.wdl._
 import _root_.wdl.expression.PureStandardLibraryFunctions
-import _root_.wdl.types._
-import _root_.wdl.values.WdlValue
+import wom.types._
+import wom.values.WdlValue
 import wom.callable.TaskDefinition
 import wom.graph.TaskCallNode
 

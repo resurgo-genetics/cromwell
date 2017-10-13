@@ -3,7 +3,7 @@ package cromwell
 import cats.data.Validated._
 import cats.syntax.validated._
 import lenthall.validation.ErrorOr.ErrorOr
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 import scala.util.{Failure, Success, Try}
 

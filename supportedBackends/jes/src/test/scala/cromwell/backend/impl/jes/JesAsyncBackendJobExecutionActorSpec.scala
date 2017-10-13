@@ -34,8 +34,8 @@ import org.slf4j.Logger
 import org.specs2.mock.Mockito
 import spray.json._
 import _root_.wdl._
-import _root_.wdl.types.{WdlArrayType, WdlFileType, WdlMapType, WdlStringType}
-import _root_.wdl.values.{WdlArray, WdlFile, WdlMap, WdlString, WdlValue}
+import wom.types.{WdlArrayType, WdlFileType, WdlMapType, WdlStringType}
+import wom.values.{WdlArray, WdlFile, WdlMap, WdlString, WdlValue}
 import wom.graph.TaskCallNode
 
 import scala.concurrent.duration._

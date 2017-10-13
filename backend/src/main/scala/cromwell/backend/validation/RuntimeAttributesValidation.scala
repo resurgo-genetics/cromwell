@@ -7,8 +7,8 @@ import cromwell.backend.{MemorySize, RuntimeAttributeDefinition}
 import lenthall.validation.ErrorOr._
 import org.slf4j.Logger
 import wdl.expression.PureStandardLibraryFunctions
-import wdl.types.{WdlBooleanType, WdlIntegerType, WdlStringType, WdlType}
-import wdl.values._
+import wom.types.{WdlBooleanType, WdlIntegerType, WdlStringType, WdlType}
+import wom.values._
 import wdl.{NoLookup, WdlExpression}
 
 import scala.util.{Failure, Success}

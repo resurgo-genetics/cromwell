@@ -9,8 +9,8 @@ import cromwell.services.EngineServicesStore
 import cromwell.util.WomMocks
 import org.scalatest.Matchers
 import org.specs2.mock.Mockito
-import wdl.types.WdlStringType
-import wdl.values.WdlString
+import wom.types.WdlStringType
+import wom.values.WdlString
 import wom.callable.Callable.OutputDefinition
 import wom.expression.PlaceholderWomExpression
 import wom.graph.WomIdentifier

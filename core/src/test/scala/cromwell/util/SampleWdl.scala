@@ -5,8 +5,8 @@ import java.util.UUID
 import cromwell.core.WorkflowSourceFilesWithoutImports
 import cromwell.core.path.{DefaultPathBuilder, Path}
 import spray.json._
-import wdl.types.{WdlArrayType, WdlStringType}
-import wdl.values._
+import wom.types.{WdlArrayType, WdlStringType}
+import wom.values._
 import wdl.{ExecutableInputMap, WorkflowJson, WorkflowSource}
 
 import scala.language.postfixOps

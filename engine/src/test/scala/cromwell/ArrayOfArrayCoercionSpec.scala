@@ -2,8 +2,8 @@ package cromwell
 
 import akka.testkit._
 import cromwell.core.Tags.PostWomTest
-import wdl.types.{WdlArrayType, WdlStringType}
-import wdl.values.{WdlArray, WdlString}
+import wom.types.{WdlArrayType, WdlStringType}
+import wom.values.{WdlArray, WdlString}
 import cromwell.util.SampleWdl
 
 

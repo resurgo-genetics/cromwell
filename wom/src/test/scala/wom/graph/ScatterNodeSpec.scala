@@ -4,7 +4,7 @@ import cats.data.Validated.{Invalid, Valid}
 import lenthall.validation.ErrorOr.ShortCircuitingFlatMap
 import org.scalatest.{FlatSpec, Matchers}
 import shapeless.Coproduct
-import wdl.types.{WdlArrayType, WdlIntegerType, WdlStringType}
+import wom.types.{WdlArrayType, WdlIntegerType, WdlStringType}
 import wom.RuntimeAttributes
 import wom.callable.Callable.{OutputDefinition, RequiredInputDefinition}
 import wom.callable.TaskDefinition

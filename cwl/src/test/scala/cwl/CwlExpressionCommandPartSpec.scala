@@ -5,7 +5,7 @@ import eu.timepit.refined._
 import eu.timepit.refined.string.MatchesRegex
 import ExpressionEvaluator._
 import shapeless.Coproduct
-import wdl.values.WdlString
+import wom.values.WdlString
 import wom.expression.PlaceholderIoFunctionSet
 import wom.graph.LocalName
 

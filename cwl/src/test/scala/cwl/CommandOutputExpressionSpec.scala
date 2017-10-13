@@ -10,8 +10,8 @@ import cats.implicits._
 import eu.timepit.refined.string.MatchesRegex
 import ExpressionEvaluator._
 import cats.data.Validated.Valid
-import wdl.types.WdlIntegerType
-import wdl.values.{WdlGlobFile, WdlInteger, WdlString}
+import wom.types.WdlIntegerType
+import wom.values.{WdlGlobFile, WdlInteger, WdlString}
 import wom.expression.PlaceholderIoFunctionSet
 
 class CommandOutputExpressionSpec extends FlatSpec with Matchers {

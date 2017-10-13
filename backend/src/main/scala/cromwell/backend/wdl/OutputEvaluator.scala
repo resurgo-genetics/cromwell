@@ -11,8 +11,8 @@ import cromwell.backend.BackendJobDescriptor
 import cromwell.core.{CallOutputs, JobOutput}
 import lenthall.validation.ErrorOr.ErrorOr
 import lenthall.validation.Checked._
-import wdl.types.WdlType
-import wdl.values.WdlValue
+import wom.types.WdlType
+import wom.values.WdlValue
 import wom.callable.Callable.OutputDefinition
 import wom.expression.IoFunctionSet
 

@@ -1,6 +1,6 @@
 package wom.graph
 
-import wdl.types.WdlOptionalType
+import wom.types.WdlOptionalType
 import wom.graph.GraphNode.GeneratedNodeAndNewNodes
 import wom.graph.GraphNodePort.{ConditionalOutputPort, InputPort, OutputPort}
 

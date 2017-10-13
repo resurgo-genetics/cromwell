@@ -3,8 +3,8 @@ package wdl
 import org.scalatest.{Matchers, WordSpec}
 import wdl.exception.ValidationException
 import wdl.expression.{NoFunctions, PureStandardLibraryFunctionsLike}
-import wdl.types.{WdlArrayType, WdlFileType, WdlIntegerType, WdlStringType}
-import wdl.values._
+import wom.types.{WdlArrayType, WdlFileType, WdlIntegerType, WdlStringType}
+import wom.values._
 
 import scala.util.{Failure, Success, Try}
 

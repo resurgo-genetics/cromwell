@@ -2,8 +2,8 @@ package cromwell.backend.impl.sfs.config
 
 import cromwell.backend.validation._
 import wdl.expression.NoFunctions
-import wdl.types._
-import wdl.values.WdlValue
+import wom.types._
+import wom.values.WdlValue
 import wdl.{Declaration, NoLookup, WdlExpression}
 import cromwell.backend.impl.sfs.config.ConfigConstants._
 

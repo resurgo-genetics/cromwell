@@ -1,6 +1,6 @@
 package cromwell
 
-import wdl.types.{WdlFileType, WdlStringType}
+import wom.types.{WdlFileType, WdlStringType}
 import wdl.{ImportResolver, WdlNamespaceWithWorkflow, WorkflowInput}
 import cromwell.util.SampleWdl
 import org.scalatest.{Matchers, WordSpecLike}

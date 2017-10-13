@@ -20,7 +20,7 @@ import cromwell.util.WomMocks
 import org.specs2.mock.Mockito
 import wdl4s.parser.WdlParser.Ast
 import _root_.wdl._
-import _root_.wdl.types.{WdlIntegerType, WdlStringType}
+import wom.types.{WdlIntegerType, WdlStringType}
 import wom.callable.Callable.{InputDefinitionWithDefault, OutputDefinition}
 import wom.expression.IoFunctionSet
 import wom.graph.{TaskCallNode, WomIdentifier}

@@ -1,7 +1,7 @@
 
 import cwl.CwlType.CwlType
 import cwl.CwlType._
-import wdl.types._
+import wom.types._
 import shapeless._
 import wom.executable.Executable
 import lenthall.Checked

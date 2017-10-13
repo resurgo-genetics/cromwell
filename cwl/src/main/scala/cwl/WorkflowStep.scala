@@ -14,8 +14,8 @@ import lenthall.validation.ErrorOr.ErrorOr
 import shapeless._
 import cwl.ScatterMethod._
 import cwl.WorkflowStep._
-import wdl.types.WdlAnyType
-import wdl.values.WdlValue
+import wom.types.WdlAnyType
+import wom.values.WdlValue
 import wom.callable.Callable._
 import wom.expression.PlaceholderWomExpression
 import wom.graph.CallNode._

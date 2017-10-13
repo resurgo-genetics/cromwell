@@ -9,8 +9,8 @@ import cromwell.backend.impl.jes.io.{JesAttachedDisk, JesWorkingDisk}
 import cromwell.backend.standard.StandardValidatedRuntimeAttributesBuilder
 import cromwell.backend.validation.{BooleanRuntimeAttributesValidation, _}
 import lenthall.validation.ErrorOr._
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 
 case class JesRuntimeAttributes(cpu: Int,

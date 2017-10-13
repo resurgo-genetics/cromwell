@@ -1,6 +1,6 @@
 package wdl
 
-import wdl.types.WdlType
+import wom.types.WdlType
 import wdl4s.parser.WdlParser._
 import wdl.AstTools.InterpolatedTerminal
 

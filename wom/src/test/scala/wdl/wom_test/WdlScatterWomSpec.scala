@@ -3,7 +3,7 @@ package wdl.wom_test
 import lenthall.collections.EnhancedCollections._
 import cats.data.Validated.{Invalid, Valid}
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types.{WdlArrayType, WdlIntegerType, WdlStringType}
+import wom.types.{WdlArrayType, WdlIntegerType, WdlStringType}
 import wdl.{WdlNamespace, WdlNamespaceWithWorkflow}
 import wom.graph.GraphNodePort.ScatterGathererPort
 import wom.graph.{GraphInputNode, ScatterNode, _}

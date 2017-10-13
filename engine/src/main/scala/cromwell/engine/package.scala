@@ -2,7 +2,7 @@ package cromwell
 
 import cromwell.core.JobOutput
 import wdl._
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 package object engine {
 

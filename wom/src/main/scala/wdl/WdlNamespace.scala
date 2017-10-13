@@ -11,8 +11,8 @@ import wdl.AstTools.{AstNodeName, EnhancedAstNode}
 import wdl.command.ParameterCommandPart
 import wdl.exception._
 import wdl.expression.{NoFunctions, WdlStandardLibraryFunctions, WdlStandardLibraryFunctionsType}
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 import wom.executable.Executable
 
 import scala.collection.JavaConverters._

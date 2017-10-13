@@ -6,7 +6,7 @@ import cromwell.backend.validation.{RuntimeAttributesKeys, ValidatedRuntimeAttri
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
 import wdl4s.parser.MemoryUnit
-import wdl.values.{WdlFloat, WdlInteger}
+import wom.values.{WdlFloat, WdlInteger}
 import ConfigConstants._
 
 class MemoryDeclarationValidationSpec extends FlatSpec with Matchers with TableDrivenPropertyChecks {

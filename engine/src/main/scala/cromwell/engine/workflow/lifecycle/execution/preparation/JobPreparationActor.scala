@@ -18,7 +18,7 @@ import cromwell.services.keyvalue.KeyValueServiceActor.{KvGet, KvJobKey, KvRespo
 import lenthall.exception.MessageAggregation
 import lenthall.validation.ErrorOr.ErrorOr
 import _root_.wdl._
-import _root_.wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.WomEvaluatedCallInputs
 import wom.callable.Callable.InputDefinition
 

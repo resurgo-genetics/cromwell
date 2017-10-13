@@ -1,7 +1,7 @@
 package wdl.command
 
 import wdl.expression.{WdlFunctions, WdlStandardLibraryFunctions}
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wdl._
 import wom.CommandPart
 import wom.graph.LocalName

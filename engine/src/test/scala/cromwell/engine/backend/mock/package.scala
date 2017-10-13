@@ -1,8 +1,8 @@
 package cromwell.engine.backend
 
 import cromwell.core.JobOutput
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 import wom.callable.Callable.OutputDefinition
 
 package object mock {

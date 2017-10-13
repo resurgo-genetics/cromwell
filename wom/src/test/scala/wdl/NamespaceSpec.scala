@@ -1,6 +1,6 @@
 package wdl
 
-import wdl.values.WdlString
+import wom.values.WdlString
 
 import scala.util.{Failure, Success, Try}
 

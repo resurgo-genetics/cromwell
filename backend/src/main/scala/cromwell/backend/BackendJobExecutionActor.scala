@@ -1,6 +1,6 @@
 package cromwell.backend
 
-import _root_.wdl.values.WdlValue
+import wom.values.WdlValue
 import akka.actor.ActorLogging
 import akka.event.LoggingReceive
 import cromwell.backend.BackendJobExecutionActor._

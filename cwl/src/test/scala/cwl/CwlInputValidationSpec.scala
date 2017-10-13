@@ -5,7 +5,7 @@ import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
 import shapeless.Coproduct
 import cwl.CwlDecoder.decodeAllCwl
-import wdl.values.{WdlBoolean, WdlFile, WdlFloat, WdlInteger, WdlString, WdlValue}
+import wom.values.{WdlBoolean, WdlFile, WdlFloat, WdlInteger, WdlString, WdlValue}
 import wom.expression.WomExpression
 import wom.graph.Graph.ResolvedExecutableInput
 import wom.graph.GraphNodePort

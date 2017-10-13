@@ -10,7 +10,7 @@ import shapeless._
 import shapeless.syntax.singleton._
 import CwlType.CwlType
 import CwlVersion._
-import wdl.types._
+import wom.types._
 import wom.callable.WorkflowDefinition
 import wom.executable.Executable
 import wom.expression.{PlaceholderWomExpression, WomExpression}

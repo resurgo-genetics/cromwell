@@ -4,8 +4,8 @@ import cats.syntax.validated._
 import lenthall.Checked
 import lenthall.validation.ErrorOr._
 import shapeless.Coproduct
-import wdl.types.WdlType
-import wdl.values.WdlValue
+import wom.types.WdlType
+import wom.values.WdlValue
 import wom.callable.Callable
 import wom.executable.Executable.ResolvedExecutableInputs
 import wom.executable.ExecutableValidation._

@@ -5,7 +5,7 @@ import eu.timepit.refined._
 import lenthall.validation.ErrorOr.ErrorOr
 import shapeless.{:+:, CNil}
 import shapeless.syntax.singleton._
-import wdl.values.{WdlSingleFile, WdlValue}
+import wom.values.{WdlSingleFile, WdlValue}
 
 object CwlType extends Enumeration {
   type CwlType = Value

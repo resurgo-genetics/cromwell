@@ -26,7 +26,8 @@ import cromwell.services.keyvalue.KvClient
 import lenthall.validation.ErrorOr.ErrorOr
 import org.slf4j.LoggerFactory
 import _root_.wdl._
-import _root_.wdl.values._
+import wom._
+import wom.values._
 import wom.callable.Callable.OutputDefinition
 
 import scala.collection.JavaConverters._

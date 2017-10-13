@@ -7,7 +7,7 @@ import cromwell.backend.wfs.WorkflowPathBuilder
 import cromwell.backend.{BackendConfigurationDescriptor, BackendInitializationData, BackendWorkflowDescriptor, BackendWorkflowInitializationActor}
 import cromwell.core.WorkflowOptions
 import cromwell.core.path.{DefaultPathBuilder, PathBuilder}
-import wdl.values.WdlValue
+import wom.values.WdlValue
 import wom.graph.TaskCallNode
 
 import scala.concurrent.Future

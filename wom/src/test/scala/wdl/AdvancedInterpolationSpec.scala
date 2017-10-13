@@ -2,7 +2,7 @@ package wdl
 
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.expression.NoFunctions
-import wdl.values._
+import wom.values._
 
 import scala.util.Try
 

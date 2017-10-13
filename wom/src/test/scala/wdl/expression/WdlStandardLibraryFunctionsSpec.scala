@@ -3,8 +3,8 @@ package wdl.expression
 import org.apache.commons.lang3.NotImplementedException
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
-import wdl.types.{WdlArrayType, WdlIntegerType, WdlOptionalType}
-import wdl.values.{WdlArray, WdlFile, WdlFloat, WdlInteger, WdlOptionalValue, WdlString, WdlValue}
+import wom.types.{WdlArrayType, WdlIntegerType, WdlOptionalType}
+import wom.values.{WdlArray, WdlFile, WdlFloat, WdlInteger, WdlOptionalValue, WdlString, WdlValue}
 
 import scala.util.{Success, Try}
 

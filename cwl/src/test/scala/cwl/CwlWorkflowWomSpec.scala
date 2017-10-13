@@ -5,7 +5,7 @@ import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
 import shapeless._
 import cwl.CwlDecoder._
-import wdl.types.{WdlFileType, WdlStringType, WdlType}
+import wom.types.{WdlFileType, WdlStringType, WdlType}
 import wom.WomMatchers._
 import wom.callable.Callable.RequiredInputDefinition
 import wom.callable.{Callable, TaskDefinition, WorkflowDefinition}

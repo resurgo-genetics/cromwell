@@ -2,7 +2,7 @@ package wdl.command
 
 import wdl._
 import wdl.expression.WdlFunctions
-import wdl.values.WdlValue
+import wom.values.WdlValue
 
 case class StringCommandPart(literal: String) extends WdlCommandPart {
   override def toString: String = literal

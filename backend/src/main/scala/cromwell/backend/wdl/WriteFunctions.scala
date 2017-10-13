@@ -1,7 +1,7 @@
 package cromwell.backend.wdl
 
 import cromwell.core.path.Path
-import wdl.values._
+import wom.values._
 import wom.expression.IoFunctionSet
 
 import scala.concurrent.Future

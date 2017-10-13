@@ -2,7 +2,7 @@ package wdl
 
 import org.scalatest.{FlatSpec, Matchers}
 import wdl.expression.NoFunctions
-import wdl.values.WdlString
+import wom.values.WdlString
 
 class SameNameParametersSpec extends FlatSpec with Matchers {
   val namespace1 = WdlNamespaceWithWorkflow.load(

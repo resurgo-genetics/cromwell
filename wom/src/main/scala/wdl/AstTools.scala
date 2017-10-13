@@ -7,8 +7,8 @@ import wdl4s.parser.WdlParser
 import wdl4s.parser.WdlParser._
 import wdl.WdlExpression.{AstForExpressions, AstNodeForExpressions}
 import wdl.expression.ValueEvaluator.InterpolationTagPattern
-import wdl.types._
-import wdl.values._
+import wom.types._
+import wom.values._
 
 import scala.collection.JavaConverters._
 import scala.language.postfixOps

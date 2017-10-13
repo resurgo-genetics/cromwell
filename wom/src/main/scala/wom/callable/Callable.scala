@@ -1,7 +1,7 @@
 package wom.callable
 
 import lenthall.validation.ErrorOr.ErrorOr
-import wdl.types.{WdlOptionalType, WdlType}
+import wom.types.{WdlOptionalType, WdlType}
 import wom.callable.Callable._
 import wom.expression.WomExpression
 import wom.graph.{Graph, LocalName}

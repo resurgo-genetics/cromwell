@@ -8,8 +8,8 @@ import wdl4s.parser.WdlParser.{Ast, SyntaxError, Terminal}
 import wdl.AstTools.EnhancedAstNode
 import wdl.exception.{ValidationException, VariableLookupException, VariableNotFoundException}
 import wdl.expression.WdlFunctions
-import wdl.types.WdlOptionalType
-import wdl.values._
+import wom.types.WdlOptionalType
+import wom.values._
 import wom.callable.Callable
 import wom.callable.Callable._
 import wom.graph.CallNode._

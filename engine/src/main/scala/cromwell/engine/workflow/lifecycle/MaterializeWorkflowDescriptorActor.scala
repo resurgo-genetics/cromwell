@@ -38,7 +38,7 @@ import spray.json._
 import cwl.CwlDecoder.Parse
 import cwl.{CwlDecoder, Workflow}
 import wdl._
-import wdl.values.{WdlSingleFile, WdlString, WdlValue}
+import wom.values.{WdlSingleFile, WdlString, WdlValue}
 import wom.callable.WorkflowDefinition
 import wom.executable.Executable
 import wom.executable.Executable.ResolvedExecutableInputs
