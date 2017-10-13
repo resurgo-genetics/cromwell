@@ -12,6 +12,9 @@ import scala.language.postfixOps
 /**
   * Builds arbitrary `WdlValues` from `WdlValueSimpletons`.
   **/
+// TODO WOM so this only seems to be used for copying cache hit results. We would need some WOM implementation to do that,
+// and assuming the WDL impl is as capable as the CWL impl we could use this if it were moved into the `wdl` subproject.
+// But then the Standard and JES backend cache hit copying depend on WDL which is kind of gross.
 object WdlValueBuilder {
 
   /**
